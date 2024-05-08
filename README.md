@@ -1,4 +1,4 @@
-# **Projeto Ecommerce de Games - README**
+# **Projeto Ecommerce de Games**
 
 Este é o repositório do projeto de um ecommerce de games, inspirado no estilo da PlayStation Store, desenvolvido utilizando a linguagem C# e o ambiente de desenvolvimento Visual Studio.
 
@@ -19,8 +19,8 @@ O objetivo deste projeto é criar uma plataforma de comércio eletrônico para v
 **Tecnologias Utilizadas:**
 
 - **C#:** Linguagem de programação principal utilizada para o desenvolvimento do backend e parte do frontend.
-- **ASP.NET Core:** Framework para construção de aplicativos web, utilizado para criar a estrutura do projeto e gerenciar a lógica da aplicação.
-- **Entity Framework:** Utilizado para mapeamento objeto-relacional (ORM), facilitando o acesso e manipulação dos dados no banco de dados.
+- **ASP.NET:** Framework para construção de aplicativos web, utilizado para criar a estrutura do projeto e gerenciar a lógica da aplicação.
+- **SQL Server:** Sistema de gerenciamento de banco de dados relacional, utilizado para armazenar e gerenciar os dados do aplicativo.
 - **HTML/CSS/JavaScript:** Utilizados para desenvolvimento da interface do usuário e interações dinâmicas no frontend.
 - **Visual Studio:** Ambiente de desenvolvimento integrado (IDE) utilizado para codificação, depuração e implantação do projeto.
 
