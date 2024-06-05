@@ -46,7 +46,7 @@ Contribuições são bem-vindas! Sinta-se à vontade para sugerir melhorias, rep
 
 **Autores:**
 
-- Luís Felipe Barros Alves - Desenvolvedor - https://github.com/alvesLuis311
+- Luis Felipe Barros Alves - Desenvolvedor - https://github.com/alvesLuis311
 - Hítalo Aguiar Borges - Desenvolvedor - https://github.com/HitaloAguiar
 
 **Licença:**
