@@ -1,0 +1,289 @@
+<div class="corFundo">
+    <div class="container">
+        <span class="titulo">Minha Conta</span>
+        <div class="profile-container">
+            <div class="profile">
+                <div class="profile-overlay" *ngIf="editandoFoto == false" (click)="editarImagem()">
+                    <ng-container *ngIf="urlImage === ''; else fotoPerfil">
+                        <img class="profile-image" src="/assets/profile.png" (mouseover)="onMouseOver()"
+                            (mouseout)="onMouseOut()">
+                    </ng-container>
+
+                    <ng-template #fotoPerfil>
+                        <img class="profile-image" [src]="urlImage" (mouseover)="onMouseOver()"
+                            (mouseout)="onMouseOut()">
+                    </ng-template>
+
+                </div>
+
+                <ng-container *ngIf="editandoFoto">
+                    <input type="file" #fileInput (change)="carregarImagemSelecionada($event)">
+                    <button class="salvar-imagem-btn" (click)="salvarImagem()">Salvar</button>
+                    <button class="cancelar-edicao-btn" (click)="cancelarEdicaoFoto()">Cancelar</button>
+                </ng-container>
+
+                <div class="nomes">
+                    <span class="text-nome">{{usuarioLogado?.nome}}</span><br>
+                    <span class="text-user">{{usuarioLogado?.login}}</span><br>
+                    <span class="text-email">{{usuarioLogado?.email}}</span>
+
+                </div>
+            </div>
+        </div>
+        <div class="option">
+            <div class="selecao">
+                <button (click)="selecionado = 'Informacoes do Usuario'"
+                    [ngClass]="{'selected': selecionado === 'Informacoes do Usuario'}">Informações do Usuário</button>
+                <button (click)="selecionado = 'historico'"
+                    [ngClass]="{'selected': selecionado === 'historico'}">Histórico de Compras</button>
+                <button (click)="selecionado = 'endereco'"
+                    [ngClass]="{'selected': selecionado === 'endereco'}">Endereço</button>
+                <button (click)="selecionado = 'senha'" [ngClass]="{'selected': selecionado === 'senha'}">Alterar
+                    Senha</button>
+            </div>
+
+            <div class="update">
+                <ng-container *ngIf="selecionado === 'Informacoes do Usuario'">
+                    <div class="info">
+                        <h1>Informações do Usuário</h1>
+                        <p><strong>Nome Completo:</strong> {{usuarioLogado?.nome}}</p>
+                        <p><strong>CPF:</strong> {{usuarioLogado?.cpf}}</p>
+                        <p><strong>Email:</strong> {{usuarioLogado?.email}}</p>
+                        <p><strong>Nome de Usuário:</strong> {{usuarioLogado?.login}}</p>
+
+                        <p><strong>Telefones:</strong></p>
+                        <ul>
+                            <li *ngFor="let telefone of usuarioLogado?.telefones">
+                                {{ telefone.numero }}
+                            </li>
+                        </ul>
+
+                        <button class="corBotao" aria-label="button para editar registro" color="primary"
+                            (click)="editar()"> Editar Informações
+                        </button>
+                    </div>
+
+
+                </ng-container>
+                <ng-container *ngIf="selecionado === 'historico'">
+                    <div class="info">
+                        <h1>Histórico de Compras de {{usuarioLogado?.nome}}</h1>
+                        <div *ngFor="let pedido of historicoCompras">
+                            <div class="pedido-info history-item">
+                                <!-- Exiba as informações do pedido -->
+                                <p>Número do Pedido: {{ pedido.id }}</p>
+                                <p>Nome do Comprador: {{ pedido.usuario.nome }}</p>
+                                <p>Data do Pedido: {{ pedido.dataHoraPedido | date:'dd/MM/yyyy HH:mm:ss' }}</p>
+                                <p>Total do Pedido: {{ pedido.totalPedido }}</p>
+                                <p>Forma de Pagamento: {{ pedido.formaPagamento }}</p>
+                                <p>Número do cartão usado: {{ pedido.numeroCartaoUsado == null? "---" : pedido.numeroCartaoUsado }}</p>
+                                <p>Status do Pagamento: {{ pedido.statusPagamento }}</p>
+                                <p>Data do Pagamento: {{ pedido.dataPagamento | date:'dd/MM/yyyy' }}</p>
+                                <p>Endereço de Entrega: {{ pedido.enderecoResponseDTO.logradouro }}, {{
+                                    pedido.enderecoResponseDTO.numero }},
+                                    {{ pedido.enderecoResponseDTO.bairro }}, {{ pedido.enderecoResponseDTO.cidade }}</p>
+
+                                <h2>Itens do Pedido:</h2>
+                                <ul>
+                                    <li *ngFor="let item of pedido.itens">
+                                        {{ item.nome }} - Quantidade: {{ item.quantidade }}
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="selecionado === 'senha'">
+                    <div class="info">
+                        <h1>Alterar Senha</h1>
+                        <ng-container *ngIf="editandoSenha == false">
+                            <h2>Confirme sua Senha atual</h2>
+                            <form [formGroup]="formGroupSenhaAtual">
+                                <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                    <mat-label>Senha</mat-label>
+                                    <input matInput type="password" formControlName="senhaAtual" />
+                                    <mat-error *ngIf="formGroupSenhaAtual.get('senhaAtual')?.hasError('apiError')">
+                                        {{ formGroupSenhaAtual.get('senhaAtual')?.getError('apiError') }}
+                                    </mat-error>
+                                </mat-form-field>
+                                <button class="corBotao" aria-label="button para editar registro" color="primary"
+                                    (click)="verificarSenha()"> Editar Senha
+                                </button>
+                            </form>
+                        </ng-container>
+
+                        <ng-container *ngIf="editandoSenha == true">
+                            <form [formGroup]="formGroupSenhaNova">
+                                <h2>Escreva a Nova Senha</h2>
+                                <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                    <mat-label>Senha</mat-label>
+                                    <input matInput type="password" formControlName="senhaNova" />
+                                    <mat-error *ngIf="formGroupSenhaNova.get('senhaNova')?.hasError('apiError')">
+                                        {{ formGroupSenhaNova.get('senhaNova')?.getError('apiError') }}
+                                    </mat-error>
+                                </mat-form-field>
+
+                                <h2>Confirme a Nova Senha</h2>
+                                <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                    <mat-label>Confirme a Senha</mat-label>
+                                    <input matInput type="password" formControlName="confirmarSenha" />
+                                    <mat-error *ngIf="formGroupSenhaNova.get('confirmarSenha')?.hasError('apiError')">
+                                        {{ formGroupSenhaNova.get('confirmarSenha')?.getError('apiError') }}
+                                    </mat-error>
+                                </mat-form-field>
+
+                                <button class="botaosalvarsenha" color="primary" mat-raised-button color="primary"
+                                    (click)="salvarNovaSenha()" [disabled]="formGroupSenhaNova.invalid">Salvar</button>
+
+                                <button mat-raised-button color="warn" (click)="terminarEdicao()">Cancelar</button>
+                            </form>
+                        </ng-container>
+
+
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="selecionado === 'endereco'">
+                    <ng-container *ngIf="usuarioLogado?.endereco != null">
+                        <div class="info">
+                            <h1>
+                                Endereço de {{usuarioLogado?.nome}}
+                            </h1>
+                            <p><strong>Logradouro: </strong> {{usuarioLogado?.endereco?.logradouro}}</p>
+                            <p><strong>Bairro: </strong> {{usuarioLogado?.endereco?.bairro}}</p>
+                            <p><strong>Número: </strong> {{usuarioLogado?.endereco?.numero}}</p>
+                            <p><strong>Complemento: </strong> {{usuarioLogado?.endereco?.complemento}}</p>
+                            <p><strong>Cep: </strong> {{usuarioLogado?.endereco?.cep}}</p>
+                            <p><strong>Cidade: </strong> {{usuarioLogado?.endereco?.cidade?.nome}}</p>
+                        </div>
+                        <button class="corBotao" aria-label="button para editar registro" (click)="editarEndereco()"
+                            color="primary"> Editar Endereço
+                        </button><br>
+                    </ng-container>
+
+                    <ng-container *ngIf="editandoEndereco">
+                        <mat-toolbar class="centered-toolbar">
+                            <h1>Editar Endereço</h1>
+                        </mat-toolbar>
+                        <div class="form-container">
+                            <mat-card>
+                                <mat-card-content>
+                                    <form [formGroup]="formGroup">
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Logradouro</mat-label>
+                                            <input matInput type="text" formControlName="logradouro" />
+                                            <mat-error *ngIf="formGroup.get('logradouro')?.hasError('apiError')">
+                                                {{ formGroup.get('logradouro')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Bairro</mat-label>
+                                            <input matInput type="text" formControlName="bairro" />
+                                            <mat-error *ngIf="formGroup.get('bairro')?.hasError('apiError')">
+                                                {{ formGroup.get('bairro')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Número</mat-label>
+                                            <input matInput type="text" formControlName="numero" />
+                                            <mat-error *ngIf="formGroup.get('numero')?.hasError('apiError')">
+                                                {{ formGroup.get('numero')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Complemento</mat-label>
+                                            <input matInput type="text" formControlName="complemento" />
+                                            <mat-error *ngIf="formGroup.get('complemento')?.hasError('apiError')">
+                                                {{ formGroup.get('complemento')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>CEP</mat-label>
+                                            <input matInput type="text" formControlName="cep" />
+                                            <mat-error *ngIf="formGroup.get('cep')?.hasError('apiError')">
+                                                {{ formGroup.get('cep')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Cidade</mat-label>
+                                            <mat-select formControlName="cidade" name="cidade">
+                                                <mat-option *ngFor="let cidade of cidades" [value]="cidade.id">{{
+                                                    cidade.nome }}</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </form>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button mat-raised-button color="primary" (click)="salvarEndereco()"
+                                        [disabled]="formGroup.invalid">Salvar</button>
+                                    <button mat-raised-button color="warn"
+                                        (click)="cancelarEdicaoEndereco()">Cancelar</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+                    </ng-container>
+                    <ng-container *ngIf="usuarioLogado?.endereco === null">
+                        <mat-toolbar class="centered-toolbar">
+                            <h1>Cadastro de Endereço</h1>
+                        </mat-toolbar>
+                        <div class="form-container">
+                            <mat-card>
+                                <mat-card-content>
+                                    <form [formGroup]="formGroup">
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Logradouro</mat-label>
+                                            <input matInput type="text" formControlName="logradouro" />
+                                            <mat-error *ngIf="formGroup.get('logradouro')?.hasError('apiError')">
+                                                {{ formGroup.get('logradouro')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Bairro</mat-label>
+                                            <input matInput type="text" formControlName="bairro" />
+                                            <mat-error *ngIf="formGroup.get('bairro')?.hasError('apiError')">
+                                                {{ formGroup.get('bairro')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Número</mat-label>
+                                            <input matInput type="text" formControlName="numero" />
+                                            <mat-error *ngIf="formGroup.get('numero')?.hasError('apiError')">
+                                                {{ formGroup.get('numero')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Complemento</mat-label>
+                                            <input matInput type="text" formControlName="complemento" />
+                                            <mat-error *ngIf="formGroup.get('complemento')?.hasError('apiError')">
+                                                {{ formGroup.get('complemento')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>CEP</mat-label>
+                                            <input matInput type="text" formControlName="cep" />
+                                            <mat-error *ngIf="formGroup.get('cep')?.hasError('apiError')">
+                                                {{ formGroup.get('cep')?.getError('apiError') }}
+                                            </mat-error>
+                                        </mat-form-field>
+                                        <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                                            <mat-label>Cidade</mat-label>
+                                            <mat-select formControlName="cidade" name="cidade">
+                                                <mat-option *ngFor="let cidade of cidades" [value]="cidade.id">{{
+                                                    cidade.nome }}</mat-option>
+                                            </mat-select>
+                                        </mat-form-field>
+                                    </form>
+                                </mat-card-content>
+                                <mat-card-actions>
+                                    <button mat-raised-button color="primary" (click)="salvarEndereco()"
+                                        [disabled]="formGroup.invalid">Salvar</button>
+                                    <button mat-raised-button color="warn"
+                                        (click)="selecionado = 'Informacoes do Usuario'">Cancelar</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

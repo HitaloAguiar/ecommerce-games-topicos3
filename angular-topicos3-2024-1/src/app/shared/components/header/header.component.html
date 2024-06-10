@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+  <button *ngIf="usuarioLogado?.perfil == 'ADMIN'" (click)="clickMenu()" mat-icon-button class="example-icon"
+    aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <img class="icone" src="/assets/icons/slime.png" routerLink="/compras/produtos" alt="logo">
+  <span class="titulo">Slime Games</span>
+  <button mat-button class="catalogo" routerLink="/compras/produtos">
+    <span>Catálogo de Jogos</span>
+  </button>
+  <button mat-button *ngIf="usuarioLogado?.perfil == 'ADMIN'" class="crud" routerLink="/admin/games/card-list">
+    <span>CRUDs</span>
+  </button>
+
+  <span class="example-spacer"></span>
+
+  <span class="example-spacer"></span>
+  <button *ngIf="usuarioLogado" routerLink="/user/compras/carrinho" mat-icon-button
+    class="demo-section example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon [matBadge]="qtdItensCarrinho" matBadgeColor="warn" matBadgePosition="after"
+      matBadgeOverlap="false">shopping_cart</mat-icon>
+  </button>
+
+  <ng-container *ngIf="usuarioLogado; else loginButton">
+    <!-- Botão de saída -->
+    <button value="blah" mat-icon-button class="mat-toolbar-content" (click)="deslogar()">
+      <a routerLink="/compras/produtos"></a>
+      <mat-icon>exit_to_app</mat-icon>
+      <!-- <span>{{usuarioLogado.nome}}</span> -->
+    </button>
+  </ng-container>
+  <span *ngIf="usuarioLogado" (click)="acessarPerfil()" style="cursor: pointer; text-decoration: none;" 
+      onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+    {{ usuarioLogado.nome }}
+</span>
+
+
+  <ng-template #loginButton>
+    <!-- Botão de login -->
+    <button mat-button class="mat-toolbar-content" routerLink="/auth/login">
+      <span>Login</span>
+    </button>
+  </ng-template>
+
+</mat-toolbar>

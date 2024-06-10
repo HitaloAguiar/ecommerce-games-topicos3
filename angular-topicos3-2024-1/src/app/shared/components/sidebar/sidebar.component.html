@@ -1,0 +1,27 @@
+<mat-drawer-container class="container">
+
+  <mat-drawer #drawer mode="side" opened>
+      <mat-toolbar>
+        <span>Menu</span>
+      </mat-toolbar>
+
+      <mat-nav-list>
+        <mat-list-item routerLink="/admin/games/card-list">Home</mat-list-item>
+        <mat-list-item routerLink="/admin/usuarios/list"><mat-icon>person_add</mat-icon> Controle de Usuário</mat-list-item>
+        <mat-list-item routerLink="/admin/games/list"> <mat-icon>shop</mat-icon> Controle de Game</mat-list-item>
+        <mat-list-item routerLink="/admin/noticias/list">	<mat-icon>assignment</mat-icon> Controle de Notícia</mat-list-item>
+        <mat-list-item routerLink="/admin/plataformas/list"><mat-icon>dashboard</mat-icon> Controle de Plataforma</mat-list-item>
+        <mat-list-item routerLink="/admin/developers/list"><mat-icon>important_devices</mat-icon> Controle de Developer</mat-list-item>
+        <mat-list-item routerLink="/admin/generos/list"><mat-icon>view_list</mat-icon> Controle de Gênero</mat-list-item>
+        <mat-list-item routerLink="/admin/fabricantes/list"><mat-icon>store</mat-icon> Controle de Fabricante</mat-list-item>
+        <mat-list-item routerLink="/admin/cidades/list"><mat-icon>location_city</mat-icon> Controle de Cidade</mat-list-item>
+        <mat-list-item routerLink="/admin/estados/list"><mat-icon>public</mat-icon> Controle de Estado</mat-list-item>
+        <mat-list-item routerLink="/admin/games/card-list"><mat-icon>shopping_cart</mat-icon> Cards de games</mat-list-item>
+      </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+

@@ -1,0 +1,189 @@
+.main-container {
+  background-color: #252525 ; /* ou qualquer outra cor de fundo desejada */
+  margin: 30px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6; /* Espaçamento entre linhas */
+  height: auto 100%;
+  
+}/* Estilos para o contêiner principal */
+
+.main-container {
+  max-width: 100%; /* ou defina uma largura máxima desejada */
+  margin: 0 auto;
+  height: auto 100%;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+mat-card {
+  width: 100%; /* ou ajuste conforme necessário */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container-input {
+  background-color: #252525 ; /* ou qualquer outra cor de fundo desejada */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Estilos para a div que envolve o campo de entrada e o botão */
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinhar elementos à esquerda verticalmente */
+  width: 80%;
+  margin-top: 24px;
+}
+
+/* Estilos para o campo de entrada */
+.input-field {
+  flex: 1;
+  margin-right: 8px;
+}
+
+/* Estilos para o botão de pesquisa */
+.search-button {
+  width: 54px;
+  height: 54px;
+  align-self: flex-start; /* Alinhar o botão verticalmente ao topo */
+  background-color: rgb(115, 42, 183);
+  margin-right: 10px;
+}
+
+/* Estilos para o ícone de pesquisa */
+mat-icon {
+  color:white;
+  font-size: 24px;
+}
+
+/* Estilos para a tabela que ocupa 100% da largura */
+.full-width-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* Remove espaços entre as células da tabela */
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  /* Espaço entre a barra de pesquisa e a tabela */
+}
+
+img {
+  width: 100%; /* 75% de 100% para manter a proporção 3:4 */
+  height: auto;
+  object-fit: cover;
+}
+
+/* Adicione estas alterações no seu CSS */
+
+/* Estilos para a div que envolve os cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards passem para a próxima linha */
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px; /* Adicione uma largura máxima conforme necessário */
+  margin: 20px auto; /* Centralize o contêiner */
+  overflow: hidden; /* Adicione overflow: hidden para evitar overflow dos elementos filhos */
+}
+
+
+/* Estilos para o contêiner dos cards */
+.container-input {
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.paginacao{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Estilos para os cards dentro do grid responsivo */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajuste a largura mínima e máxima conforme necessário */
+  gap: 20px;
+  justify-content: center;
+  color: white;
+  
+}
+/* Ajuste o tamanho da imagem dos cards para manter a proporção */
+
+/* Ajustes de margem para o paginador */
+.mat-elevation-z8 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 1200px; /* Adicione uma largura máxima conforme necessário */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Ajuste a altura mínima da seção de cards */
+.cards {
+  min-height: 350px; /* Ajuste conforme necessário para evitar a falta de conteúdo */
+}
+
+
+.centered-text {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(3, 44, 106);
+}
+
+#logado{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(3, 44, 106);
+}
+
+#deslogado{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(3, 44, 106);
+}
+mat-card{
+  border: 2px solid #ffffff; /* Adiciona uma borda de 2 pixels sólida com cor branca */
+  padding: 1px; /* Adiciona um preenchimento interno de 10 pixels para dar espaço à borda */
+  color: #ffffff;
+}
+
+/* Ajustes para o botão "Ver mais" */
+.mat-card-actions button {
+  color: white; /* Cor do texto */
+  background-color: purple; /* Cor de fundo do botão */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+/* Altera a cor do botão quando hover (passar o mouse sobre) */
+.mat-card-actions button:hover {
+  background-color: darkpurple; /* Cor de fundo do botão ao passar o mouse sobre ele */
+}
+
+.mat-button{
+  background-color: white;
+}

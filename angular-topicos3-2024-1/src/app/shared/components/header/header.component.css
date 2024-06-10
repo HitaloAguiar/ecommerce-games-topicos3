@@ -1,0 +1,28 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.demo-section + .demo-section {
+  margin-top: 16px;
+}
+
+/* Adicione este estilo para ajustar a imagem do logo */
+.icone {
+  height: 40px; /* Ajuste a altura conforme necessário */
+  margin-right: 10px; /* Ajuste a margem conforme necessário */
+}
+
+.titulo{
+  margin-right: 100px; /* Ajuste a margem conforme necessário */  
+  transition: background-color 0.3s;
+}
+
+.login-button {
+
+  margin-right: 50px;
+}
+
+span.hovered {
+  border-bottom: 1px solid #000; /* Adicione o estilo desejado para a linha em baixo do nome */
+  cursor: pointer; /* Adicione um estilo de cursor para indicar que é clicável */
+}

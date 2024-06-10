@@ -1,0 +1,106 @@
+<mat-toolbar>
+  <div class="flex-container">
+    <span class="toolbar-title"> Controle de Games </span>
+    <button mat-mini-fab color="primary" routerLink="/admin/games/new">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<div class="container">
+  <div class="input-container">
+    <mat-form-field appearance="outline" class="input-field">
+      <mat-label>Pesquisar</mat-label>
+      <input [(ngModel)]="filtro" matInput placeholder="Ex. The Last of Us" #input (keyup.enter)="aplicarFiltro()">
+    </mat-form-field>
+    <button mat-icon-button
+            class="search-button"
+            (click)="aplicarFiltro()">
+      <mat-icon>search</mat-icon>
+    </button>
+    <button mat-icon-button class="search-button" (click)="gerarRelatorio(filtro)">
+      <mat-icon>description</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="games" matSort>
+    <!-- Id Column -->
+    <ng-container matColumnDef="id-column">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let game"> {{game.id}} </td>
+    </ng-container>
+
+    <!-- Nome Column -->
+    <ng-container matColumnDef="nome-column">
+      <th mat-header-cell *matHeaderCellDef> Nome </th>
+      <td mat-cell *matCellDef="let game"> {{game.nome}} </td>
+    </ng-container>
+
+    <!-- Ano de Lançamento Column -->
+    <ng-container matColumnDef="ano-lancamento-column">
+        <th mat-header-cell *matHeaderCellDef> Ano de Lançamento </th>
+        <td mat-cell *matCellDef="let game"> {{game.anoLancamento}} </td>
+    </ng-container>
+
+    <!-- Developer Column -->
+    <ng-container matColumnDef="developer-column">
+      <th mat-header-cell *matHeaderCellDef> Developer </th>
+      <td mat-cell *matCellDef="let game"> {{game.developer.nome}} </td>
+    </ng-container>
+
+    <!-- Gênero Column -->
+    <ng-container matColumnDef="genero-column">
+      <th mat-header-cell *matHeaderCellDef> Gêneros </th>
+      <td mat-cell *matCellDef="let game">
+        <mat-list role="list" *ngFor="let genero of game.generos">
+          {{ genero.nome }}
+        </mat-list>
+      </td>
+    </ng-container>
+
+    <!-- Plataforma Column -->
+    <ng-container matColumnDef="plataforma-column">
+      <th mat-header-cell *matHeaderCellDef> Plataformas </th>
+      <td mat-cell *matCellDef="let game">
+        <mat-list role="list" *ngFor="let plataforma of game.plataformas">
+          {{ plataforma.nome }}
+        </mat-list>
+      </td>
+    </ng-container>
+
+    <!-- Preço Column -->
+    <ng-container matColumnDef="preco-column">
+      <th mat-header-cell *matHeaderCellDef> Preço </th>
+      <td mat-cell *matCellDef="let game"> R$ {{game.preco}} </td>
+    </ng-container>
+
+    <!-- Ações Column -->
+    <ng-container matColumnDef="acoes-column">
+      <th mat-header-cell *matHeaderCellDef>Ações</th>
+      <td mat-cell *matCellDef="let game">
+        <a routerLink="/admin/games/edit/{{game.id}}">
+          <button mat-icon-button aria-label="button para editar registro" color="primary">
+            <mat-icon> edit</mat-icon>
+          </button>
+        </a>
+          <button mat-icon-button aria-label="button para deletar registro" (click)="excluir(game)" color="warn">
+            <mat-icon>delete</mat-icon>
+          </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: tableColumns;"></tr>
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">nenhum game encontrado com o nome "{{input.value}}"</td>
+    </tr>
+  </table>
+  </div>
+  <div class="mat-elevation-z8">
+  <mat-paginator [pageSizeOptions]="[4, 8, 16, 20]" [pageSize]="pageSize" [length]="totalRegistros"
+  (page)="paginar($event)">
+  </mat-paginator>
+  </div>

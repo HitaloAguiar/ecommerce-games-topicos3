@@ -1,0 +1,96 @@
+.principal {
+  background-color: #252525;
+  /* ou qualquer outra cor de fundo desejada */
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: aliceblue;
+  height: auto 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.secundario{
+  background-color: #252525;
+  padding: 30px;
+}
+
+/* mat-form-field */
+.full-width-input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.conteudo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+mat-card {
+  max-width: 800px;
+  padding: 2rem;
+  margin: auto;
+  /* Adicione esta linha para centralizar horizontalmente */
+  padding: 30px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* para a div */
+.form-container {
+  justify-content: center;
+  padding: 2rem;
+}
+
+.centered-toolbar {
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+}
+
+button[mat-raised-button] {
+  width: 120px;
+  height: 45px;
+  /* tamanho do botao */
+}
+
+img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.centered-text {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+.responsive-grid {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+  gap: 20px;
+}
+
+button[mat-raised-button]:not(:last-child) {
+  margin-right: 1rem;
+  /* Adiciona margem à direita de todos os botões, exceto o último */
+}
+
+.selects {
+
+  margin-right: 5rem;
+}

@@ -1,0 +1,80 @@
+/* Estilo para o body, definindo a imagem de fundo */
+body{
+  background-image: url('src/assets/icons/teladefundo.jpg'); /* ajuste o caminho conforme necessário */
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* Estilo para o container principal do formulário */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Estilo para a palavra Slime Games no centro */
+.bold-purple {
+  font-weight: bold; /* Negrito */
+  color: rgb(115, 42, 183);
+}
+
+/* Estilo para a caixa do formulário */
+.login-box {
+  background-color: rgba(255, 255, 255, 0.8); /* fundo branco com 80% de opacidade */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Estilo para o ícone de login */
+.login-icon {
+  width: 250px;
+  height: 150px;
+}
+
+/* Estilo para o título do formulário */
+.login-title {
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+/* Estilo para os campos de entrada */
+.login-input {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(10, 10, 10, 9.35); /* Ajuste os valores para tornar a sombra mais evidente */
+}
+
+/* Estilo para o botão de login */
+.login-button {
+  margin-top: 20px;
+  margin-left: 5px;
+  
+}
+
+/* Estilo para o link "Esqueceu a senha?" */
+.forgot-password {
+  margin-top: 10px;
+}
+
+/* Adicionando algum espaçamento entre os erros e os campos de entrada */
+.mat-error {
+  margin-top: 5px;
+  font-size: 0.8em;
+  color: #ff0000;
+}
+
+

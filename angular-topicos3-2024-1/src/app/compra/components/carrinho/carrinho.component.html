@@ -1,0 +1,177 @@
+<div class="ss">
+  <div class="fundo"><br>
+    <div class="principal">
+      <blockquote class="carrinho">
+        <ng-container *ngIf="carrinhoItens.length > 0; else carrinhoVazio">
+          <div class="carrinho-container">
+            <div *ngFor="let item of carrinhoItens" class="carrinho-item mat-elevation-z2">
+              <img class="imagem-do-carrinho" [src]="item.urlImagem">
+              <div class="carrinho-item-details">
+                <h3>{{ item.nome }}</h3>
+                <p>Preço: {{ item.preco | currency:'BRL':'symbol':'1.2-2' }}</p>
+                <div class="quantidade-container">
+                  Quantidade
+                  <button mat-icon-button class="quantidade-button" color="warn" (click)="diminuirQuantidade(item)">
+                    <mat-icon>remove</mat-icon>
+                  </button>
+                  <span class="quantidade-label">{{ item.quantidade }}</span>
+                  <button mat-icon-button class="quantidade-button" color="primary" (click)="aumentarQuantidade(item)">
+                    <mat-icon>add</mat-icon>
+                  </button>
+                </div>
+                <p>Total: {{ item.quantidade * item.preco | currency:'BRL':'symbol':'1.2-2' }}</p>
+                <button mat-raised-button color="warn" (click)="removerItem(item)">Remover do Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="carrinho-total mat-elevation-z2">
+            <p><strong>Total do Carrinho: {{ calcularTotal() | currency:'BRL':'symbol':'1.2-2' }}</strong></p>
+
+            <button mat-raised-button color="primary" routerLink="/compras/produtos">Escolher mais
+              produtos</button>
+            <button (click)="continuarCompra()" mat-raised-button color="accent">Continuar
+              Compra</button>
+
+
+          </div>
+          <div class="continuando" *ngIf="continuar == true">
+            <ng-container *ngIf="usuarioLogado?.endereco != null; else enderecoNulo">
+              <h1>Selecionar Endereço</h1>
+
+              <div class="info card">
+                <h1>
+                  Endereço de {{usuarioLogado?.nome}}
+                </h1>
+                <p><strong>Logradouro: </strong> {{usuarioLogado?.endereco?.logradouro}}</p>
+                <p><strong>Bairro: </strong> {{usuarioLogado?.endereco?.bairro}}</p>
+                <p><strong>Número: </strong> {{usuarioLogado?.endereco?.numero}}</p>
+                <p><strong>Complemento: </strong> {{usuarioLogado?.endereco?.complemento}}</p>
+                <p><strong>Cep: </strong> {{usuarioLogado?.endereco?.cep}}</p>
+                <p><strong>Cidade: </strong> {{usuarioLogado?.endereco?.cidade?.nome}}</p>
+
+                <!-- Adiciona uma opção de seleção ao lado -->
+                <button (click)="selecionarEndereco()" mat-icon-button color="primary">
+                  <mat-icon *ngIf="enderecoSelecionado">check_circle</mat-icon>
+                  <div *ngIf="!enderecoSelecionado" class="circulo-branco"></div>
+                </button>
+                <button mat-icon-button color="primary" (click)="abrirDialogoConfirmacao()">
+                  <mat-icon>edit</mat-icon>
+                </button>
+              </div>
+
+              <button (click)="seguirParaPagamento()" mat-raised-button color="primary"
+                [disabled]="!enderecoSelecionado">
+                Seguir para pagamento
+              </button>
+            </ng-container>
+
+            <ng-template #enderecoNulo>
+              <h2>Este Usuário não tem endereço cadastrado</h2>
+              <button  mat-raised-button color="primary" (click)="redirecionarParaPerfil()">
+                Ir para Perfil
+              </button>
+            </ng-template>
+
+            <br><br>
+            <ng-container *ngIf="pagando == true">
+              <h1>Escolha a forma de pagamento</h1>
+              <form>
+                <label>
+                  <input type="radio" name="paymentOption" value="pix" [(ngModel)]="selectedOption"> Pix
+                </label>
+
+                <label>
+                  <input type="radio" name="paymentOption" value="boleto" [(ngModel)]="selectedOption"> Boleto
+                </label>
+
+                <label>
+                  <input type="radio" name="paymentOption" value="cartao" [(ngModel)]="selectedOption"> Cartão
+                </label>
+
+              </form>
+              <div *ngIf="selectedOption === 'pix'">
+                <p class="final">Pix Gerado!</p>
+                <button (click)="finalizarCompra()" mat-raised-button color="accent">Finalizar Compra</button>
+              </div>
+
+              <div *ngIf="selectedOption === 'boleto'">
+                <p class="final">Boleto Gerado!</p>
+                <button (click)="finalizarCompra()" mat-raised-button color="accent">Finalizar Compra</button>
+              </div>
+
+              <div *ngIf="selectedOption === 'cartao'">
+                <ng-container>
+                  <form class="cartaoCss" [formGroup]="formGroup">
+                      <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                          <mat-label>Número do Cartão</mat-label>
+                          <input matInput type="text" formControlName="numeroCartao" />
+                          <mat-error *ngIf="formGroup.get('numeroCartao')?.hasError('apiError')">
+                              {{ formGroup.get('numeroCartao')?.getError('apiError') }}
+                          </mat-error>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                          <mat-label>Nome Impresso no Cartão</mat-label>
+                          <input matInput type="text" formControlName="nomeImpressoCartao" />
+                          <mat-error *ngIf="formGroup.get('nomeImpressoCartao')?.hasError('apiError')">
+                              {{ formGroup.get('nomeImpressoCartao')?.getError('apiError') }}
+                          </mat-error>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                          <mat-label>Data de Validade</mat-label>
+                          <input matInput [matDatepicker]="picker" formControlName="dataValidade">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                          <mat-error *ngIf="formGroup.get('dataValidade')?.hasError('apiError')">
+                              {{ formGroup.get('dataValidade')?.getError('apiError') }}
+                          </mat-error>
+                      </mat-form-field>
+
+                      <!-- <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                          <mat-label>CPF do Titular</mat-label>
+                          <input matInput type="text" formControlName="cpfTitular" />
+                          <mat-error *ngIf="formGroup.get('cpfTitular')?.hasError('apiError')">
+                              {{ formGroup.get('cpfTitular')?.getError('apiError') }}
+                          </mat-error>
+                      </mat-form-field> -->
+
+                      <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                          <mat-label> Bandeira do Cartão </mat-label>
+                          <mat-select formControlName="bandeiraCartao" name="bandeiraCartao">
+                              <mat-option value="VISA">Visa</mat-option>
+                              <mat-option value="AMERICAN_EXPRESS">American Express</mat-option>
+                              <mat-option value="HIPERCARD">Hipercard</mat-option>
+                              <mat-option value="DINERS">Diners</mat-option>
+                              <mat-option value="MASTERCARD">Mastercard</mat-option>
+                              <mat-option value="ELO">Elo</mat-option>
+                          </mat-select>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" class="full-width-input" color="accent">
+                          <mat-label>Código de Segurança</mat-label>
+                          <input matInput type="text" formControlName="codigoSeguranca" />
+                          <mat-error *ngIf="formGroup.get('codigoSeguranca')?.hasError('apiError')">
+                              {{ formGroup.get('codigoSeguranca')?.getError('apiError') }}
+                          </mat-error>
+                      </mat-form-field>
+                      <button (click)="finalizarCompra()" [disabled]="formGroup.invalid" mat-raised-button color="accent">Finalizar Compra</button>
+                  </form>
+              </ng-container>
+
+              </div>
+
+
+            </ng-container>
+          </div>
+
+        </ng-container>
+      </blockquote>
+      <ng-template #carrinhoVazio>
+        <div class="carrinho-vazio">
+          <p>O carrinho está vazio.</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

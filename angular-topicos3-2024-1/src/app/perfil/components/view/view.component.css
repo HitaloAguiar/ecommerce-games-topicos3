@@ -1,0 +1,322 @@
+.corFundo {
+  background-color: #252525;
+  height: auto ;
+  color: azure;
+  min-height: 800px;
+}
+h2{
+  text-align: center;
+}
+
+.botaosalvarsenha{
+  background-color: green;
+}
+
+.history-item {
+  border-top: 1px solid #fff; /* Borda na parte superior de cada item */
+  border-bottom: 1px solid #fff; /* Borda na parte inferior de cada item */
+  padding: 15px 0; /* Adicione espaçamento para separar visualmente cada item do histórico */
+}
+
+.history-item:first-child {
+  border-top: 1px solid #fff; /* Adicione a borda superior ao primeiro item */
+}
+
+.history-item:last-child {
+  border-bottom: 1px solid #fff; /* Adicione a borda inferior ao último item */
+}
+
+.container {
+  margin: auto;
+  width: 60%;
+  gap: 10px;
+  background-color: #252525;
+  height: auto;
+}
+h1{
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.cancelar-edicao-btn,
+.salvar-imagem-btn {
+  margin-top: 10px;
+  padding: 3px 6px; /* Ajuste o padding para alterar o tamanho do botão */
+  font-size: 12px; /* Ajuste o tamanho da fonte conforme necessário */
+  display: inline-block; /* Torna os botões compactos horizontalmente */
+  width: auto; /* Permite que a largura seja determinada pelo conteúdo */
+  height: 20px;
+  margin-left: 12px;
+}
+
+.salvar-imagem-btn {
+  background-color: #4caf50;
+  color: white;
+  border: white;
+}
+
+.cancelar-edicao-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.profile-container {
+  border-radius: 1%;
+  background-color: #3b3b3b;
+}
+
+.profile-image {
+  width: 175px; /* Ajuste a largura conforme necessário */
+  height: 175px; /* Ajuste a altura conforme necessário */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+}
+
+.cartaoCss {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #3b3b3b;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cartaoCss label {
+  font-size: 16px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.cartaoCss input {
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #252525;
+  color: white;
+}
+
+.cartaoCss button {
+  background-color: green;
+  color: white;
+  border: none;
+  width: fit-content;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cartaoCss button:hover {
+  background-color: darkgreen;
+}
+
+
+.profile {
+  padding: 20px;
+  display: flex;
+  background-color: #3b3b3b;
+  border-radius: 1%;
+  margin-bottom: 30px;
+}
+
+.profile-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-overlay img {
+  transition: filter 0.3s ease;
+}
+
+.profile-overlay:hover img {
+  filter: brightness(70%);
+}
+
+.botao-adicionar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+.profile-overlay:hover .botao-adicionar {
+  display: block;
+}
+
+img {
+  max-width: 200px;
+  border-radius: 100%;
+}
+
+.text-nome {
+  font-size: 39px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.text-user {
+  font-size: 27px;
+}
+
+.text-email {
+  font-size: 20px;
+}
+
+.text-nome,
+.text-user,
+.text-email {
+  line-height: 1.4;
+  /* Ajuste o valor conforme necessário */
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 36px;
+  background-color: #252525;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.nomes {
+  margin: 25px;
+  padding: 15px;
+}
+
+.option {
+  display: flex;
+  background-color: #252525;
+  padding: 35px;
+}
+
+.update {
+  max-width: 70%;
+  background-color: #3b3b3b;
+  border-radius: 1%;
+  width: 100%;
+  margin-left: auto; /* Coloca o .update na margem direita */
+}
+
+.selecao {
+  max-width: 25%;
+  background-color: #3b3b3b;
+  display: flex;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  width: 100%; /* Ocupa 100% da largura do contêiner */
+  height: 0;
+}
+
+/* Estilizar os botões (opcional) */
+.selecao button {
+  background-color: #3b3b3b;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.selecao button:hover {
+  width: 100%; /* Ocupa 100% da largura do contêiner */
+  background-color: #1a1a1a;
+}
+
+.selecao button.selected {
+  background-color: #181818; /* Cor mais clara quando selecionado */
+  color: #fff;
+}
+
+
+.full-width-input {
+  width: 100%;
+}
+
+mat-card {
+  max-width: 800px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.centered-toolbar {
+  display: flex;
+  justify-content: center;
+  font-size:x-large;
+}
+
+button[mat-raised-button] {
+  width: 120px;
+}
+
+button[mat-raised-button]:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.info {
+  background-color: #3b3b3b;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.user-info {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.user-info p {
+  margin-bottom: 10px;
+}
+
+.user-info strong {
+  font-weight: bolder;
+  margin-right: 5px;
+}
+
+.corBotao{
+  background-color: green;
+  font-weight: bolder;
+  color: white;
+  border: none;
+  padding: 10px;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  display: block; /* Garante que o botão ocupa toda a largura disponível */
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.saveDelete{
+
+  justify-content: center;
+  justify-items: center;
+}
+
+.adress{
+  margin: 15px;
+}

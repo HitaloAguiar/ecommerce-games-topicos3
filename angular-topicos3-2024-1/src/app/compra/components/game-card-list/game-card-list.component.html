@@ -1,0 +1,45 @@
+<div class="main-container">
+  <div class="container-input">
+    <div class="input-container">
+      <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Pesquisar</mat-label>
+        <input [(ngModel)]="filtro" matInput placeholder="Ex. The Last of Us" #input (keyup.enter)="aplicarFiltro()">
+      </mat-form-field>
+      <button mat-icon-button class="search-button" (click)="aplicarFiltro()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="container responsive-grid">
+      <ng-container *ngIf="jogosEncontrados; else nenhumJogoEncontrado">
+      <mat-card  *ngFor="let card of cards()">
+
+        <img mat-card-image [src]="card.urlImagem">
+
+        <mat-card-title class="centered-text"> {{card.titulo}} </mat-card-title>
+
+        <mat-card-content class="centered-text"> {{card.developer}} </mat-card-content>
+
+        <mat-card-content class="centered-text"> {{card.preco | currency:'BRL'}} </mat-card-content>
+
+        <mat-card-footer>
+          <button mat-flat-button color="primary" (click)="adicionarAoCarrinho(card)" style="width: 100%; padding: 16px;">Adicionar ao carrinho</button>
+        </mat-card-footer>
+      </mat-card>
+    </ng-container>
+    <ng-template #nenhumJogoEncontrado>
+      <p>Nenhum jogo foi encontrado.</p>
+    </ng-template>
+    </div>
+  </div>
+  <br>
+  <div class="mat-elevation-z8">
+    
+    
+  </div>
+  <mat-paginator class="paginacao" [pageSizeOptions]="[6, 12, 24, 32]" [pageSize]="pageSize" [length]="totalRegistros"
+  (page)="paginar($event)">
+</mat-paginator>
+</div>

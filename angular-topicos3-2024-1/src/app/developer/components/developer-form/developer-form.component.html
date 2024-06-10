@@ -1,0 +1,48 @@
+<mat-toolbar class="centered-toolbar">Cadastro de Developer</mat-toolbar>
+<div class="form-container">
+  <mat-card>
+    <mat-card-content>
+
+      <form [formGroup]="formGroup">
+          <mat-form-field appearance="outline" class="full-width-input" color="accent">
+              <mat-label>Nome</mat-label>
+              <input matInput type="text" formControlName="nome"/>
+              <mat-error *ngIf="formGroup.get('nome')?.hasError('apiError')">
+                {{ formGroup.get('nome')?.getError('apiError') }}
+              </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline" class="full-width-input" color="accent">
+            <mat-label>Ano de Fundação</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="anoFundacao">
+            <mat-hint>DD/MM/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="formGroup.get('anoFundacao')?.hasError('apiError')">
+              {{ formGroup.get('anoFundacao')?.getError('apiError') }}
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width-input" color="accent">
+            <mat-label> Classificação </mat-label>
+            <mat-select formControlName="classificacao" name="classificacao">
+              <mat-option value="FIRST_PARTY">First party</mat-option>
+              <mat-option value="SECOND_PARTY">Second party</mat-option>
+              <mat-option value="THIRD_PARTY">Third party</mat-option>
+              <mat-option value="INDIE">Indie</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary"
+              (click)="salvar()"
+              [disabled]="formGroup.invalid">
+              Salvar
+      </button>
+      <button mat-raised-button
+              routerLink="/admin/developers/list">
+              Cancelar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
