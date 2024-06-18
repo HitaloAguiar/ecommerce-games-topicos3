@@ -1,0 +1,94 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "ecommerceContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "ecommerce_topicos3",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 0,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[Cidade]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Compra]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Endereco]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Estado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FormaPagamento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Game]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GameGenero]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[GamePlataforma]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ItemCompra]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Pagamento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Perfil]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Usuario]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[UsuarioGame]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseAsyncStoredProcedureCalls": true,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": false,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
