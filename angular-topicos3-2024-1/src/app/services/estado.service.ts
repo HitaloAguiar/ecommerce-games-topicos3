@@ -13,46 +13,46 @@ export class EstadoService {
   constructor(private http: HttpClient) {}
 
   findAll(): Observable<Estado[]> {
-    return this.http.get<Estado[]>(`${this.baseURL}/api/Estado`);
+    return this.http.get<Estado[]>(`${this.baseURL}`);
   }
 
-  findAllPaginado(pagina: number, tamanhoPagina: number): Observable<Estado[]> {
-    const params = {
-      page: pagina.toString(),
-      pageSize: tamanhoPagina.toString()
-    }
-    return this.http.get<Estado[]>(`${this.baseURL}/estados/paginado`, {params});
-  }
+//  findAllPaginado(pagina: number, tamanhoPagina: number): Observable<Estado[]> {
+//    const params = {
+//      page: pagina.toString(),
+//      pageSize: tamanhoPagina.toString()
+//    }
+//    return this.http.get<Estado[]>(`${this.baseURL}/estados/paginado`, {params});
+//  }
 
   findById(id: string): Observable<Estado> {
-    return this.http.get<Estado>(`${this.baseURL}/estados/${id}`);
+    return this.http.get<Estado>(`${this.baseURL}/${id}`);
   }
 
   save(estado: Estado): Observable<Estado> {
-    return this.http.post<Estado>(`${this.baseURL}/estados`, estado);
+    return this.http.post<Estado>(`${this.baseURL}`, estado);
   }
 
   update(estado: Estado): Observable<Estado> {
-    return this.http.put<Estado>(`${this.baseURL}/estados/${estado.id}`, estado);
+    return this.http.put<Estado>(`${this.baseURL}/${estado.id}`, estado);
   }
 
   delete(estado: Estado): Observable<any> {
-    return this.http.delete<any>(`${this.baseURL}/estados/${estado.id}`);
+    return this.http.delete<any>(`${this.baseURL}/${estado.id}`);
   }
 
-  findByNome(nome: string, pagina: number, tamanhoPagina: number): Observable<Estado[]> {
-    const params = {
-      page: pagina.toString(),
-      pageSize: tamanhoPagina.toString()
-    }
-    return this.http.get<Estado[]>(`${this.baseURL}/estados/search/${nome}`, {params});
-  }
+//  findByNome(nome: string, pagina: number, tamanhoPagina: number): Observable<Estado[]> {
+//    const params = {
+//      page: pagina.toString(),
+//      pageSize: tamanhoPagina.toString()
+//    }
+//    return this.http.get<Estado[]>(`${this.baseURL}/estados/search/${nome}`, {params});
+//  }
 
-  count(): Observable<number> {
-    return this.http.get<number>(`${this.baseURL}/estados/count`);
-  }
+//  count(): Observable<number> {
+//    return this.http.get<number>(`${this.baseURL}/estados/count`);
+//  }
 
-  countByNome(nome: string): Observable<number> {
-    return this.http.get<number>(`${this.baseURL}/estados/search/${nome}/count`);
-  }
+//  countByNome(nome: string): Observable<number> {
+//    return this.http.get<number>(`${this.baseURL}/estados/search/${nome}/count`);
+//  }
 }

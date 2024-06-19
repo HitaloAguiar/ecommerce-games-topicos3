@@ -1,19 +1,4 @@
 <div class="container-input">
-  <div class="input-container">
-    <mat-form-field appearance="outline" class="input-field">
-      <mat-label>Pesquisar</mat-label>
-      <input [(ngModel)]="filtro" matInput placeholder="Ex. The Last of Us" #input (keyup.enter)="aplicarFiltro()">
-    </mat-form-field>
-    <button mat-icon-button
-            class="search-button"
-            (click)="aplicarFiltro()">
-      <mat-icon>search</mat-icon>
-    </button>
-    <button mat-icon-button class="search-button" (click)="gerarRelatorio(filtro)">
-      <mat-icon>description</mat-icon>
-    </button>
-  </div>
-</div>
 
 <div class="container responsive-grid">
   <mat-card *ngFor="let card of cards()">

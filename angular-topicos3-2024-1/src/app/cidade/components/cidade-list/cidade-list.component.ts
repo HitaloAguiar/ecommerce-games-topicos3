@@ -26,7 +26,7 @@ export class CidadeListComponent implements OnInit {
   ngOnInit(): void {
 
     this.carregarCidades();
-    this.carregarTotalRegistros();
+//    this.carregarTotalRegistros();
   }
 
   ngAfterViewInit() {
@@ -37,31 +37,25 @@ export class CidadeListComponent implements OnInit {
 
   carregarCidades() {
 
-    // se existe dados no filtro
-    if (this.filtro) {
-      this.cidadeService.findByNome(this.filtro, this.pagina, this.pageSize).subscribe(data => {
+      // buscando todos os usuarios
+      this.cidadeService.findAll().subscribe(data => {
         this.cidades = data;
       });
-    } else {
-      // buscando todos os cidades
-      this.cidadeService.findAllPaginado(this.pagina, this.pageSize).subscribe(data => {
-        this.cidades = data;
-      });
-    }
+    
   }
 
-  carregarTotalRegistros() {
-    // se existe dados no filtro
-    if (this.filtro) {
-      this.cidadeService.countByNome(this.filtro).subscribe(data => {
-        this.totalRegistros = data;
-      });
-    } else {
-      this.cidadeService.count().subscribe(data => {
-        this.totalRegistros = data;
-      });
-    }
-  }
+ // carregarTotalRegistros() {
+   // // se existe dados no filtro
+//    if (this.filtro) {
+//      this.cidadeService.countByNome(this.filtro).subscribe(data => {
+//        this.totalRegistros = data;
+//      });
+//    } else {
+//      this.cidadeService.count().subscribe(data => {
+//        this.totalRegistros = data;
+//      });
+//    }
+//  }
 
   excluir(cidade: Cidade) {
 
@@ -87,6 +81,6 @@ export class CidadeListComponent implements OnInit {
 
   aplicarFiltro() {
     this.carregarCidades();
-    this.carregarTotalRegistros();
+ //   this.carregarTotalRegistros();
   }
 }

@@ -13,48 +13,48 @@ export class GameService {
   constructor(private http: HttpClient) { }
 
   findAll(): Observable<Game[]> {
-    return this.http.get<Game[]>(`${this.baseURL}/api/Game`);
+    return this.http.get<Game[]>(`${this.baseURL}`);
   }
 
-  findAllPaginado(pagina: number, tamanhoPagina: number): Observable<Game[]> {
-    const params = {
-      page: pagina.toString(),
-      pageSize: tamanhoPagina.toString()
-    }
-    return this.http.get<Game[]>(`${this.baseURL}/games/paginado`, { params });
-  }
+//  findAllPaginado(pagina: number, tamanhoPagina: number): Observable<Game[]> {
+//    const params = {
+//      page: pagina.toString(),
+//      pageSize: tamanhoPagina.toString()
+//    }
+//    return this.http.get<Game[]>(`${this.baseURL}/games/paginado`, { params });
+//  }
 
   findById(id: string): Observable<Game> {
-    return this.http.get<Game>(`${this.baseURL}/games/${id}`);
+    return this.http.get<Game>(`${this.baseURL}/${id}`);
   }
 
   save(game: Game): Observable<Game> {
-    return this.http.post<Game>(`${this.baseURL}/games`, game);
+    return this.http.post<Game>(`${this.baseURL}`, game);
   }
 
   update(game: Game): Observable<Game> {
-    return this.http.put<Game>(`${this.baseURL}/games/${game.id}`, game);
+    return this.http.put<Game>(`${this.baseURL}/${game.id}`, game);
   }
 
   delete(game: Game): Observable<any> {
-    return this.http.delete<any>(`${this.baseURL}/games/${game.id}`);
+    return this.http.delete<any>(`${this.baseURL}/${game.id}`);
   }
 
-  findByNome(nome: string, pagina: number, tamanhoPagina: number): Observable<Game[]> {
-    const params = {
-      page: pagina.toString(),
-      pageSize: tamanhoPagina.toString()
-    }
-    return this.http.get<Game[]>(`${this.baseURL}/games/search/${nome}`, { params });
-  }
+//  findByNome(nome: string, pagina: number, tamanhoPagina: number): Observable<Game[]> {
+//    const params = {
+//      page: pagina.toString(),
+//      pageSize: tamanhoPagina.toString()
+//    }
+//    return this.http.get<Game[]>(`${this.baseURL}/games/search/${nome}`, { params });
+//  }
 
-  count(): Observable<number> {
-    return this.http.get<number>(`${this.baseURL}/games/count`);
-  }
+//  count(): Observable<number> {
+//    return this.http.get<number>(`${this.baseURL}/games/count`);
+//  }
 
-  countByNome(nome: string): Observable<number> {
-    return this.http.get<number>(`${this.baseURL}/games/search/${nome}/count`);
-  }
+//  countByNome(nome: string): Observable<number> {
+//    return this.http.get<number>(`${this.baseURL}/games/search/${nome}/count`);
+//  }
 
   getUrlImagem(nomeImagem: string): string {
     return `${this.baseURL}/games/image/download/${nomeImagem}`;

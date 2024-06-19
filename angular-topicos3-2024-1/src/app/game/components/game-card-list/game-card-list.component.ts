@@ -38,23 +38,13 @@ export class GameCardListComponent implements OnInit {
 
   ngOnInit(): void {
     this.carregarGames();
-    this.carregarTotalRegistros();
   }
 
   carregarGames() {
 
-    if (this.filtro) {
-      this.gameService.findByNome(this.filtro, this.pagina, this.pageSize).subscribe(data => {
-        this.games = data;
-        this.carregarCards();
-      });
-    } else {
-      // buscando todos os games
-      this.gameService.findAllPaginado(this.pagina, this.pageSize).subscribe(data => {
-        this.games = data;
-        this.carregarCards();
-      });
-    }
+    this.gameService.findAll().subscribe(data => {
+      this.games = data;
+    });
   }
 
   gerarRelatorio(filtro: string) {
@@ -68,19 +58,6 @@ export class GameCardListComponent implements OnInit {
         console.error('Erro ao gerar relatório', error);
       }
     );
-  }
-
-  carregarTotalRegistros() {
-    // se existe dados no filtro
-    if (this.filtro) {
-      this.gameService.countByNome(this.filtro).subscribe(data => {
-        this.totalRegistros = data;
-      });
-    } else {
-      this.gameService.count().subscribe(data => {
-        this.totalRegistros = data;
-      });
-    }
   }
 
   carregarCards() {
@@ -105,6 +82,5 @@ export class GameCardListComponent implements OnInit {
 
   aplicarFiltro() {
     this.carregarGames();
-    this.carregarTotalRegistros();
   }
 }

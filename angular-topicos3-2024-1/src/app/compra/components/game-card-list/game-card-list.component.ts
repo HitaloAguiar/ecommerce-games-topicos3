@@ -45,26 +45,17 @@ export class GameCardListComponent implements OnInit {
 
   ngOnInit(): void {
     this.carregarGames();
-    this.carregarTotalRegistros();
     if (this.paginator) {
       this.paginator._intl = this.customPaginatorIntl; // Configuração da internacionalização
     }
   }
 
   carregarGames() {
-    if (this.filtro) {
-      this.gameService.findByNome(this.filtro, this.pagina, this.pageSize).subscribe(data => {
-        this.games = data;
-        this.jogosEncontrados = this.games.length > 0; // Atualiza jogosEncontrados aqui
-        this.carregarCards();
-      });
-    } else {
-      this.gameService.findAllPaginado(this.pagina, this.pageSize).subscribe(data => {
-        this.games = data;
-        this.jogosEncontrados = this.games.length > 0; // Atualiza jogosEncontrados aqui
-        this.carregarCards();
-      });
-    }
+    this.gameService.findAll().subscribe(data => {
+      this.games = data;
+      this.jogosEncontrados = this.games.length > 0; // Atualiza jogosEncontrados aqui
+      this.carregarCards();
+    });
   }
 
 
@@ -72,19 +63,6 @@ export class GameCardListComponent implements OnInit {
     this.subscription.add(this.authService.getUsuarioLogado().subscribe(
       usuario => this.usuarioLogado = usuario
     ));
-  }
-
-  carregarTotalRegistros() {
-    // se existe dados no filtro
-    if (this.filtro) {
-      this.gameService.countByNome(this.filtro).subscribe(data => {
-        this.totalRegistros = data;
-      });
-    } else {
-      this.gameService.count().subscribe(data => {
-        this.totalRegistros = data;
-      });
-    }
   }
 
   carregarCards() {
@@ -110,7 +88,6 @@ export class GameCardListComponent implements OnInit {
 
   aplicarFiltro() {
     this.carregarGames();
-    this.carregarTotalRegistros();
   }
 
   adicionarAoCarrinho(card: Card): void {

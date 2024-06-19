@@ -21,7 +21,7 @@ export class CompraService {
 
   getCompras(): Observable<Compra[]> {
 
-    return this.http.get<Compra[]>(`${this.baseURL}/historico-compras`);
+    return this.http.get<Compra[]>(`${this.baseURL}`);
   }
 
   insertIntoCarrrinho(itemCompra: ItemCarrinho[]): Observable<any> {

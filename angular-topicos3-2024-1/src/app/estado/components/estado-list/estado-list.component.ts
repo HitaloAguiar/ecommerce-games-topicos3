@@ -32,36 +32,40 @@ export class EstadoListComponent implements OnInit {
   ngOnInit(): void {
 
     this.carregarEstados();
-    this.carregarTotalRegistros();
+//    this.carregarTotalRegistros();
   }
 
   carregarEstados() {
 
+    this.estadoService.findAll().subscribe(data => {
+      this.estados = data;
+    });
+
     // se existe dados no filtro
-    if (this.filtro) {
-      this.estadoService.findByNome(this.filtro, this.pagina, this.pageSize).subscribe(data => {
-        this.estados = data;
-      });
-    } else {
+//    if (this.filtro) {
+//      this.estadoService.findByNome(this.filtro, this.pagina, this.pageSize).subscribe(data => {
+//        this.estados = data;
+//      });
+//    } else {
       // buscando todos os estados
-      this.estadoService.findAllPaginado(this.pagina, this.pageSize).subscribe(data => {
-        this.estados = data;
-      });
-    }
+//      this.estadoService.findAllPaginado(this.pagina, this.pageSize).subscribe(data => {
+//        this.estados = data;
+//      });
+//    }
   }
 
-  carregarTotalRegistros() {
+//  carregarTotalRegistros() {
     // se existe dados no filtro
-    if (this.filtro) {
-      this.estadoService.countByNome(this.filtro).subscribe(data => {
-        this.totalRegistros = data;
-      });
-    } else {
-      this.estadoService.count().subscribe(data => {
-        this.totalRegistros = data;
-      });
-    }
-  }
+//    if (this.filtro) {
+//      this.estadoService.countByNome(this.filtro).subscribe(data => {
+//        this.totalRegistros = data;
+//      });
+//    } else {
+//      this.estadoService.count().subscribe(data => {
+//        this.totalRegistros = data;
+//      });
+//    }
+//  }
 
   excluir(estado: Estado) {
 
@@ -87,6 +91,6 @@ export class EstadoListComponent implements OnInit {
 
   aplicarFiltro() {
     this.carregarEstados();
-    this.carregarTotalRegistros();
+ //   this.carregarTotalRegistros();
   }
 }

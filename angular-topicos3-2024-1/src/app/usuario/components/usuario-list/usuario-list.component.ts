@@ -32,36 +32,24 @@ export class UsuarioListComponent implements OnInit {
   ngOnInit(): void {
 
     this.carregarUsuarios();
-    this.carregarTotalRegistros();
+//    this.carregarTotalRegistros();
   }
 
   carregarUsuarios() {
 
     // se existe dados no filtro
-    if (this.filtro) {
-      this.usuarioService.findByNome(this.filtro, this.pagina, this.pageSize).subscribe(data => {
-        this.usuarios = data;
-      });
-    } else {
+//    if (this.filtro) {
+//      this.usuarioService.findByNome(this.filtro, this.pagina, this.pageSize).subscribe(data => {
+//        this.usuarios = data;
+//      });
+//    } else {
       // buscando todos os usuarios
       this.usuarioService.findAll().subscribe(data => {
         this.usuarios = data;
       });
-    }
+//    }
   }
 
-  carregarTotalRegistros() {
-    // se existe dados no filtro
-    if (this.filtro) {
-      this.usuarioService.countByNome(this.filtro).subscribe(data => {
-        this.totalRegistros = data;
-      });
-    } else {
-      this.usuarioService.count().subscribe(data => {
-        this.totalRegistros = data;
-      });
-    }
-  }
 
   excluir(usuario: Usuario) {
 
@@ -87,6 +75,6 @@ export class UsuarioListComponent implements OnInit {
 
   aplicarFiltro() {
     this.carregarUsuarios();
-    this.carregarTotalRegistros();
+  //  this.carregarTotalRegistros();
   }
 }

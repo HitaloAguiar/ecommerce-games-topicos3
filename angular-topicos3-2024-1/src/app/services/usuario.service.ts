@@ -41,21 +41,21 @@ export class UsuarioService {
     return this.http.delete<any>(`${this.baseURL}/${usuario.id}`);
   }
 
-  findByNome(nome: string, pagina: number, tamanhoPagina: number): Observable<Usuario[]> {
-    const params = {
-      page: pagina.toString(),
-      pageSize: tamanhoPagina.toString()
-    }
-    return this.http.get<Usuario[]>(`${this.baseURL}/search/${nome}`, {params});
-  }
+//  findByNome(nome: string, pagina: number, tamanhoPagina: number): Observable<Usuario[]> {
+//    const params = {
+//      page: pagina.toString(),
+//      pageSize: tamanhoPagina.toString()
+//    }
+//    return this.http.get<Usuario[]>(`${this.baseURL}/search/${nome}`, {params});
+//  }
 
-  count(): Observable<number> {
-    return this.http.get<number>(`${this.baseURL}/count`);
-  }
+//  count(): Observable<number> {
+//    return this.http.get<number>(`${this.baseURL}/count`);
+//  }
 
-  countByNome(nome: string): Observable<number> {
-    return this.http.get<number>(`${this.baseURL}/search/${nome}/count`);
-  }
+//  countByNome(nome: string): Observable<number> {
+//    return this.http.get<number>(`${this.baseURL}/search/${nome}/count`);
+//  }
 
   getEndereco(idUsuario: string): Observable<Endereco> {
     return this.http.get<Endereco>(`${this.baseURL}/endereco/${idUsuario}`);
@@ -68,7 +68,7 @@ export class UsuarioService {
   }
 
   atualizarEndereco(idUsuario: number, endereco: Endereco): Observable<any> {
-    return this.http.patch(`${this.baseURL}/endereco/update/${idUsuario}`, endereco);
+    return this.http.patch(`${this.baseURL}/endereco/${idUsuario}`, endereco);
   }
 
   atualizarSenha(idUsuario: number | undefined, senhaNova: string, confirmarSenha: string): Observable<any> {
@@ -97,7 +97,7 @@ export class UsuarioService {
 
   verificaSenha(idUsuario: number | undefined, senha: string): Observable<boolean> {
 
-    return this.http.get<boolean>(`${this.baseURL}/verifica/${senha}/${idUsuario}`);
+    return this.http.get<boolean>(`${this.baseURL}/verifica-senha/${senha}/${idUsuario}`);
   }
 
   getCartao(id: number): Observable<any> {

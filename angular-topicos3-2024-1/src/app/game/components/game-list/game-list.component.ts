@@ -32,22 +32,26 @@ export class GameListComponent implements OnInit {
   ngOnInit(): void {
 
     this.carregarGames();
-    this.carregarTotalRegistros();
+//    this.carregarTotalRegistros();
   }
 
   carregarGames() {
 
+    this.gameService.findAll().subscribe(data => {
+      this.games = data;
+    });
+
     // se existe dados no filtro
-    if (this.filtro) {
-      this.gameService.findByNome(this.filtro, this.pagina, this.pageSize).subscribe(data => {
-        this.games = data;
-      });
-    } else {
+//    if (this.filtro) {
+//      this.gameService.findByNome(this.filtro, this.pagina, this.pageSize).subscribe(data => {
+//        this.games = data;
+//      });
+//    } else {
       // buscando todos os games
-      this.gameService.findAllPaginado(this.pagina, this.pageSize).subscribe(data => {
-        this.games = data;
-      });
-    }
+//      this.gameService.findAllPaginado(this.pagina, this.pageSize).subscribe(data => {
+//        this.games = data;
+//      });
+//    }
   }
 
   gerarRelatorio(filtro: string): void {
@@ -71,18 +75,18 @@ export class GameListComponent implements OnInit {
     });
   }
 
-  carregarTotalRegistros() {
-    // se existe dados no filtro
-    if (this.filtro) {
-      this.gameService.countByNome(this.filtro).subscribe(data => {
-        this.totalRegistros = data;
-      });
-    } else {
-      this.gameService.count().subscribe(data => {
-        this.totalRegistros = data;
-      });
-    }
-  }
+//  carregarTotalRegistros() {
+//    // se existe dados no filtro
+//    if (this.filtro) {
+//      this.gameService.countByNome(this.filtro).subscribe(data => {
+//        this.totalRegistros = data;
+//      });
+//    } else {
+//      this.gameService.count().subscribe(data => {
+//        this.totalRegistros = data;
+//      });
+//    }
+//  }
 
   excluir(game: Game) {
 
@@ -108,6 +112,6 @@ export class GameListComponent implements OnInit {
 
   aplicarFiltro() {
     this.carregarGames();
-    this.carregarTotalRegistros();
+//    this.carregarTotalRegistros();
   }
 }

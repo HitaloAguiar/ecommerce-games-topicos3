@@ -13,46 +13,30 @@ export class CidadeService {
   constructor(private http: HttpClient) {}
 
   findAll(): Observable<Cidade[]> {
-    return this.http.get<Cidade[]>(`${this.baseURL}/cidades`);
-  }
-
-  findAllPaginado(pagina: number, tamanhoPagina: number): Observable<Cidade[]> {
-    const params = {
-      page: pagina.toString(),
-      pageSize: tamanhoPagina.toString()
-    }
-    return this.http.get<Cidade[]>(`${this.baseURL}/cidades/paginado`, {params});
+    return this.http.get<Cidade[]>(`${this.baseURL}`);
   }
 
   findById(id: string): Observable<Cidade> {
-    return this.http.get<Cidade>(`${this.baseURL}/cidades/${id}`);
+    return this.http.get<Cidade>(`${this.baseURL}/${id}`);
   }
 
   save(cidade: Cidade): Observable<Cidade> {
-    return this.http.post<Cidade>(`${this.baseURL}/cidades`, cidade);
+    return this.http.post<Cidade>(`${this.baseURL}`, cidade);
   }
 
   update(cidade: Cidade): Observable<Cidade> {
-    return this.http.put<Cidade>(`${this.baseURL}/cidades/${cidade.id}`, cidade);
+    return this.http.put<Cidade>(`${this.baseURL}/${cidade.id}`, cidade);
   }
 
   delete(cidade: Cidade): Observable<any> {
-    return this.http.delete<any>(`${this.baseURL}/cidades/${cidade.id}`);
+    return this.http.delete<any>(`${this.baseURL}/${cidade.id}`);
   }
 
-  findByNome(nome: string, pagina: number, tamanhoPagina: number): Observable<Cidade[]> {
-    const params = {
-      page: pagina.toString(),
-      pageSize: tamanhoPagina.toString()
-    }
-    return this.http.get<Cidade[]>(`${this.baseURL}/cidades/search/${nome}`, {params});
-  }
+//  count(): Observable<number> {
+//    return this.http.get<number>(`${this.baseURL}/cidades/count`);
+//  }
 
-  count(): Observable<number> {
-    return this.http.get<number>(`${this.baseURL}/cidades/count`);
-  }
-
-  countByNome(nome: string): Observable<number> {
-    return this.http.get<number>(`${this.baseURL}/cidades/search/${nome}/count`);
-  }
+//  countByNome(nome: string): Observable<number> {
+//    return this.http.get<number>(`${this.baseURL}/cidades/search/${nome}/count`);
+//  }
 }
