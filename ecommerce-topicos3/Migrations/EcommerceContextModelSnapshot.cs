@@ -22,24 +22,6 @@ namespace ecommerce_topicos3.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("GamePlataforma", b =>
-                {
-                    b.Property<long>("GameId")
-                        .HasColumnType("bigint")
-                        .HasColumnName("gameId");
-
-                    b.Property<long>("PlataformaId")
-                        .HasColumnType("bigint")
-                        .HasColumnName("plataformaId");
-
-                    b.HasKey("GameId", "PlataformaId")
-                        .HasName("PK__GamePlat__65DBCC0A56124D0F");
-
-                    b.HasIndex("PlataformaId");
-
-                    b.ToTable("GamePlataforma");
-                });
-
             modelBuilder.Entity("GameUsuario", b =>
                 {
                     b.Property<long>("GameId")
@@ -98,19 +80,6 @@ namespace ecommerce_topicos3.Migrations
                     b.ToTable("Cidade");
                 });
 
-            modelBuilder.Entity("ecommerce_topicos3.Models.Classificacao", b =>
-                {
-                    b.Property<string>("Classificacao1")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("classificacao");
-
-                    b.HasKey("Classificacao1")
-                        .HasName("PK__Classifi__7CA6287386AF377D");
-
-                    b.ToTable("Classificacao");
-                });
-
             modelBuilder.Entity("ecommerce_topicos3.Models.Compra", b =>
                 {
                     b.Property<long>("Id")
@@ -128,13 +97,14 @@ namespace ecommerce_topicos3.Migrations
                         .HasColumnType("bigint")
                         .HasColumnName("enderecoId");
 
+                    b.Property<string>("FormaPagamento")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasColumnName("formaPagamento");
+
                     b.Property<bool>("IfConcluida")
                         .HasColumnType("bit")
                         .HasColumnName("ifConcluida");
-
-                    b.Property<long>("PagamentoId")
-                        .HasColumnType("bigint")
-                        .HasColumnName("pagamentoId");
 
                     b.Property<double>("TotalCompra")
                         .HasColumnType("float")
@@ -149,44 +119,11 @@ namespace ecommerce_topicos3.Migrations
 
                     b.HasIndex("EnderecoId");
 
-                    b.HasIndex("PagamentoId");
+                    b.HasIndex("FormaPagamento");
 
                     b.HasIndex("UsuarioId");
 
                     b.ToTable("Compra");
-                });
-
-            modelBuilder.Entity("ecommerce_topicos3.Models.Developer", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasColumnName("id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<DateOnly>("AnoFundacao")
-                        .HasColumnType("date")
-                        .HasColumnName("anoFundacao");
-
-                    b.Property<string>("Classificacao")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)")
-                        .HasColumnName("classificacao");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("nome");
-
-                    b.HasKey("Id")
-                        .HasName("PK__Develope__3213E83F97915D59");
-
-                    b.HasIndex("Classificacao");
-
-                    b.ToTable("Developer");
                 });
 
             modelBuilder.Entity("ecommerce_topicos3.Models.Endereco", b =>
@@ -266,31 +203,6 @@ namespace ecommerce_topicos3.Migrations
                     b.ToTable("Estado");
                 });
 
-            modelBuilder.Entity("ecommerce_topicos3.Models.Fabricante", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasColumnName("id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<DateOnly>("AnoFundacao")
-                        .HasColumnType("date")
-                        .HasColumnName("anoFundacao");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("nome");
-
-                    b.HasKey("Id")
-                        .HasName("PK__Fabrican__3213E83F3B34B7FF");
-
-                    b.ToTable("Fabricante");
-                });
-
             modelBuilder.Entity("ecommerce_topicos3.Models.FormaPagamento", b =>
                 {
                     b.Property<string>("FormaPagamento1")
@@ -317,21 +229,18 @@ namespace ecommerce_topicos3.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
-                    b.Property<DateOnly>("AnoLancamento")
-                        .HasColumnType("date")
-                        .HasColumnName("anoLancamento");
-
                     b.Property<string>("Descricao")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("descricao");
 
-                    b.Property<long>("DeveloperId")
-                        .HasColumnType("bigint")
-                        .HasColumnName("developerId");
+                    b.Property<string>("Developer")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("developer");
 
-                    b.Property<string>("Generos")
+                    b.Property<string>("Genero")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("generos");
+                        .HasColumnName("genero");
 
                     b.Property<string>("Nome")
                         .IsRequired()
@@ -339,14 +248,17 @@ namespace ecommerce_topicos3.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("nome");
 
+                    b.Property<string>("Plataforma")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)")
+                        .HasColumnName("plataforma");
+
                     b.Property<double>("Preco")
                         .HasColumnType("float")
                         .HasColumnName("preco");
 
                     b.HasKey("Id")
                         .HasName("PK__Game__3213E83F08EE263F");
-
-                    b.HasIndex("DeveloperId");
 
                     b.ToTable("Game");
                 });
@@ -438,41 +350,6 @@ namespace ecommerce_topicos3.Migrations
                     b.ToTable("Perfil");
                 });
 
-            modelBuilder.Entity("ecommerce_topicos3.Models.Plataforma", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint")
-                        .HasColumnName("id");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<DateOnly>("AnoLancamento")
-                        .HasColumnType("date")
-                        .HasColumnName("anoLancamento");
-
-                    b.Property<string>("Descricao")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("descricao");
-
-                    b.Property<long>("FabricanteId")
-                        .HasColumnType("bigint")
-                        .HasColumnName("fabricanteId");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(255)
-                        .HasColumnType("nvarchar(255)")
-                        .HasColumnName("nome");
-
-                    b.HasKey("Id")
-                        .HasName("PK__Platafor__3213E83F2B7DF664");
-
-                    b.HasIndex("FabricanteId");
-
-                    b.ToTable("Plataforma");
-                });
-
             modelBuilder.Entity("ecommerce_topicos3.Models.Usuario", b =>
                 {
                     b.Property<long>("Id")
@@ -493,6 +370,10 @@ namespace ecommerce_topicos3.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)")
                         .HasColumnName("email");
+
+                    b.Property<long?>("EnderecoId")
+                        .HasColumnType("bigint")
+                        .HasColumnName("enderecoId");
 
                     b.Property<long?>("EnderecoPrincipalId")
                         .HasColumnType("bigint")
@@ -538,21 +419,6 @@ namespace ecommerce_topicos3.Migrations
                     b.ToTable("Usuario");
                 });
 
-            modelBuilder.Entity("GamePlataforma", b =>
-                {
-                    b.HasOne("ecommerce_topicos3.Models.Game", null)
-                        .WithMany()
-                        .HasForeignKey("GameId")
-                        .IsRequired()
-                        .HasConstraintName("FK_GamePlataforma_Game");
-
-                    b.HasOne("ecommerce_topicos3.Models.Plataforma", null)
-                        .WithMany()
-                        .HasForeignKey("PlataformaId")
-                        .IsRequired()
-                        .HasConstraintName("FK_GamePlataforma_Plataforma");
-                });
-
             modelBuilder.Entity("UsuarioGame", b =>
                 {
                     b.HasOne("ecommerce_topicos3.Models.Game", null)
@@ -587,11 +453,10 @@ namespace ecommerce_topicos3.Migrations
                         .IsRequired()
                         .HasConstraintName("FK_Compra_Endereco");
 
-                    b.HasOne("ecommerce_topicos3.Models.Pagamento", "Pagamento")
+                    b.HasOne("ecommerce_topicos3.Models.FormaPagamento", "FormaPagamentoNavigation")
                         .WithMany("Compra")
-                        .HasForeignKey("PagamentoId")
-                        .IsRequired()
-                        .HasConstraintName("FK_Compra_Pagamento");
+                        .HasForeignKey("FormaPagamento")
+                        .HasConstraintName("FK_Compra_FormaPagamento");
 
                     b.HasOne("ecommerce_topicos3.Models.Usuario", "Usuario")
                         .WithMany("Compra")
@@ -601,20 +466,9 @@ namespace ecommerce_topicos3.Migrations
 
                     b.Navigation("Endereco");
 
-                    b.Navigation("Pagamento");
+                    b.Navigation("FormaPagamentoNavigation");
 
                     b.Navigation("Usuario");
-                });
-
-            modelBuilder.Entity("ecommerce_topicos3.Models.Developer", b =>
-                {
-                    b.HasOne("ecommerce_topicos3.Models.Classificacao", "ClassificacaoNavigation")
-                        .WithMany("Developer")
-                        .HasForeignKey("Classificacao")
-                        .IsRequired()
-                        .HasConstraintName("FK_Developer_Classificacao");
-
-                    b.Navigation("ClassificacaoNavigation");
                 });
 
             modelBuilder.Entity("ecommerce_topicos3.Models.Endereco", b =>
@@ -626,17 +480,6 @@ namespace ecommerce_topicos3.Migrations
                         .HasConstraintName("FK_Endereco_Cidade");
 
                     b.Navigation("Cidade");
-                });
-
-            modelBuilder.Entity("ecommerce_topicos3.Models.Game", b =>
-                {
-                    b.HasOne("ecommerce_topicos3.Models.Developer", "Developer")
-                        .WithMany("Game")
-                        .HasForeignKey("DeveloperId")
-                        .IsRequired()
-                        .HasConstraintName("FK_Game_Developer");
-
-                    b.Navigation("Developer");
                 });
 
             modelBuilder.Entity("ecommerce_topicos3.Models.ItemCompra", b =>
@@ -669,17 +512,6 @@ namespace ecommerce_topicos3.Migrations
                     b.Navigation("FormaPagamentoNavigation");
                 });
 
-            modelBuilder.Entity("ecommerce_topicos3.Models.Plataforma", b =>
-                {
-                    b.HasOne("ecommerce_topicos3.Models.Fabricante", "Fabricante")
-                        .WithMany("Plataforma")
-                        .HasForeignKey("FabricanteId")
-                        .IsRequired()
-                        .HasConstraintName("FK_Plataforma_Fabricante");
-
-                    b.Navigation("Fabricante");
-                });
-
             modelBuilder.Entity("ecommerce_topicos3.Models.Usuario", b =>
                 {
                     b.HasOne("ecommerce_topicos3.Models.Endereco", "EnderecoPrincipal")
@@ -703,19 +535,9 @@ namespace ecommerce_topicos3.Migrations
                     b.Navigation("Endereco");
                 });
 
-            modelBuilder.Entity("ecommerce_topicos3.Models.Classificacao", b =>
-                {
-                    b.Navigation("Developer");
-                });
-
             modelBuilder.Entity("ecommerce_topicos3.Models.Compra", b =>
                 {
                     b.Navigation("ItemCompra");
-                });
-
-            modelBuilder.Entity("ecommerce_topicos3.Models.Developer", b =>
-                {
-                    b.Navigation("Game");
                 });
 
             modelBuilder.Entity("ecommerce_topicos3.Models.Endereco", b =>
@@ -730,24 +552,16 @@ namespace ecommerce_topicos3.Migrations
                     b.Navigation("Cidade");
                 });
 
-            modelBuilder.Entity("ecommerce_topicos3.Models.Fabricante", b =>
-                {
-                    b.Navigation("Plataforma");
-                });
-
             modelBuilder.Entity("ecommerce_topicos3.Models.FormaPagamento", b =>
                 {
+                    b.Navigation("Compra");
+
                     b.Navigation("Pagamento");
                 });
 
             modelBuilder.Entity("ecommerce_topicos3.Models.Game", b =>
                 {
                     b.Navigation("ItemCompra");
-                });
-
-            modelBuilder.Entity("ecommerce_topicos3.Models.Pagamento", b =>
-                {
-                    b.Navigation("Compra");
                 });
 
             modelBuilder.Entity("ecommerce_topicos3.Models.Perfil", b =>
