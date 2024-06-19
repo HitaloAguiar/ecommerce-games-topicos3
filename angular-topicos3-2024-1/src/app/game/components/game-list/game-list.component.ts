@@ -13,7 +13,7 @@ export class GameListComponent implements OnInit {
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator | undefined;
 
-  tableColumns: string[] = ['id-column', 'nome-column', 'ano-lancamento-column', 'developer-column', 'genero-column', 'plataforma-column', 'preco-column', 'acoes-column'];
+  tableColumns: string[] = ['id-column', 'nome-column', 'descricao-column', 'developer-column', 'genero-column', 'plataforma-column', 'preco-column', 'acoes-column'];
   games: Game[] = [];
 
   totalRegistros = 0;

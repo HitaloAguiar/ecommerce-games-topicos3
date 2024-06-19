@@ -38,26 +38,25 @@
       <td mat-cell *matCellDef="let game"> {{game.nome}} </td>
     </ng-container>
 
-    <!-- Ano de Lançamento Column -->
-    <ng-container matColumnDef="ano-lancamento-column">
-        <th mat-header-cell *matHeaderCellDef> Ano de Lançamento </th>
-        <td mat-cell *matCellDef="let game"> {{game.anoLancamento}} </td>
-    </ng-container>
-
     <!-- Developer Column -->
-    <ng-container matColumnDef="developer-column">
-      <th mat-header-cell *matHeaderCellDef> Developer </th>
-      <td mat-cell *matCellDef="let game"> {{game.developer}} </td>
+    <ng-container matColumnDef="descricao-column">
+      <th mat-header-cell *matHeaderCellDef> descricao </th>
+      <td mat-cell *matCellDef="let game"> {{game.descricao}} </td>
     </ng-container>
 
     <!-- Gênero Column -->
     <ng-container matColumnDef="developer-column">
+      <th mat-header-cell *matHeaderCellDef> developer </th>
+      <td mat-cell *matCellDef="let game"> {{game.developer}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="genero-column">
       <th mat-header-cell *matHeaderCellDef> Gênero </th>
       <td mat-cell *matCellDef="let game"> {{game.genero}} </td>
     </ng-container>
 
     <!-- Plataforma Column -->
-    <ng-container matColumnDef="developer-column">
+    <ng-container matColumnDef="plataforma-column">
       <th mat-header-cell *matHeaderCellDef> Plataforma </th>
       <td mat-cell *matCellDef="let game"> {{game.plataforma}} </td>
     </ng-container>

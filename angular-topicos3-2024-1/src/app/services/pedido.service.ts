@@ -11,7 +11,7 @@ import { CartaoCredito } from '../models/cartao-credito.model';
 })
 
 export class PedidoService {
-  private baseURL: string =  'http://localhost:8080';
+  private baseURL: string =  'http://localhost:7036';
 
   constructor(private http: HttpClient) {}
 

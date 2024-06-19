@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class CarrinhoService {
-  private baseURL: string =  'http://localhost:8080';
+  private baseURL: string =  'http://localhost:7036';
 
   private carrinhoSubject = new BehaviorSubject<ItemCarrinho[]>([]);
   carrinho$ = this.carrinhoSubject.asObservable();

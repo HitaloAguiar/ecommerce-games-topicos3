@@ -10,7 +10,7 @@ import { Usuario } from '../models/usuario.model';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseURL: string = 'http://localhost:8080/auth';
+  private baseURL: string = 'http://localhost:7036/api/auth';
   private tokenKey = 'jwt_token';
   private usuarioLogadoKey = 'usuario_logado';
   private usuarioLogadoSubject = new BehaviorSubject<Usuario | null>(null);

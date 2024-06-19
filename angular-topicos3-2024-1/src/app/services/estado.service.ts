@@ -8,12 +8,12 @@ import { Estado } from '../models/estado.model';
 })
 export class EstadoService {
 
-  private baseURL: string =  'http://localhost:8080';
+  private baseURL: string =  'http://localhost:7036';
 
   constructor(private http: HttpClient) {}
 
   findAll(): Observable<Estado[]> {
-    return this.http.get<Estado[]>(`${this.baseURL}/estados`);
+    return this.http.get<Estado[]>(`${this.baseURL}/api/Estado`);
   }
 
   findAllPaginado(pagina: number, tamanhoPagina: number): Observable<Estado[]> {

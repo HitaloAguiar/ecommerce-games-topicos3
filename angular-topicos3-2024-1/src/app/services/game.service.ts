@@ -8,12 +8,12 @@ import { Game } from '../models/game.model';
 })
 export class GameService {
 
-  private baseURL: string = 'http://localhost:8080';
+  private baseURL: string = 'http://localhost:7036';
 
   constructor(private http: HttpClient) { }
 
   findAll(): Observable<Game[]> {
-    return this.http.get<Game[]>(`${this.baseURL}/games`);
+    return this.http.get<Game[]>(`${this.baseURL}/api/Game`);
   }
 
   findAllPaginado(pagina: number, tamanhoPagina: number): Observable<Game[]> {

@@ -11,7 +11,7 @@ import { BandeiraCartao, Cartao } from '../models/pagamento.model';
   providedIn: 'root'
 })
 export class CompraService {
-  private baseURL: string =  'http://localhost:8080/compras';
+  private baseURL: string =  'http://localhost:7036/api/Compra';
 
   constructor(private http: HttpClient, private authService: AuthService) {}
 
