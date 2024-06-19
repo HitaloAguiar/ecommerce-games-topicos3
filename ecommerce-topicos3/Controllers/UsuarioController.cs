@@ -9,6 +9,7 @@ using ecommerce_topicos3.Models;
 using AutoMapper;
 using ecommerce_topicos3.DTO;
 using ecommerce_topicos3.Interfaces;
+using ecommerce_topicos3.Services;
 
 namespace ecommerce_topicos3.Controllers
 {
@@ -19,13 +20,15 @@ namespace ecommerce_topicos3.Controllers
         private readonly EcommerceContext _context;
         private readonly IMapper _mapper;
         private readonly IUsuarioRepository _usuarioRepository;
+        private readonly ITokenService _tokenService;
 
 
-        public UsuarioController(EcommerceContext context, IMapper mapper, IUsuarioRepository usuarioRepository)
+        public UsuarioController(EcommerceContext context, IMapper mapper, IUsuarioRepository usuarioRepository, ITokenService tokenService)
         {
             _context = context;
             _mapper = mapper;
             _usuarioRepository = usuarioRepository;
+            _tokenService = tokenService;
         }
 
         // GET: api/Usuario
@@ -91,7 +94,18 @@ namespace ecommerce_topicos3.Controllers
                     return BadRequest("Esse username já foi cadastrado");
                 }
             }
-            _usuarioRepository.Incluir(_mapper.Map<Usuario>(usuarioDTO));
+
+            Usuario usuarioUpdate = new Usuario();
+
+            usuarioUpdate.Nome = usuarioDTO.Nome;
+            usuarioUpdate.Cpf = usuarioDTO.Cpf;
+            usuarioUpdate.Perfil = usuarioDTO.Perfil;
+            usuarioUpdate.Senha = _tokenService.HashPassword(usuarioDTO.Senha);
+            usuarioUpdate.Email = usuarioDTO.Email;
+            usuarioUpdate.Username = usuarioDTO.Username;
+            usuarioUpdate.Telefone = usuarioDTO.Telefone;
+
+            _usuarioRepository.Incluir(usuarioUpdate);
             if (await _usuarioRepository.SaveAllAsync())
             {
                 return Ok("Usuario cadastrado com sucesso");

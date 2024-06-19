@@ -25,18 +25,23 @@ namespace ecommerce_topicos3.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Login([FromBody] LoginDTO login)
         {
-            var token = _tokenService.GenerateToken(login);
+            var usuario = _usuarioRepository.SelecionarPorUsername(login.Username);
 
-            var usuario = _usuarioRepository.SelecionarPorEmail(login.Email);
-
-            if (token == "" || token == null)
+            if (usuario == null)
             {
-                return Unauthorized();
+                return NotFound("Username inválido");
             }
 
-            string json = JsonConvert.SerializeObject(token);
+            if (!_tokenService.VerifyPassword(login.Senha, usuario.Senha))
+            {
+                return NotFound("Senha inválida");
+            }
 
-            return Ok(json);
+            var token = _tokenService.GenerateToken(usuario);
+
+            Response.Headers.Append("Authorization", token);
+
+            return Ok(usuario);
         }
     }
 }

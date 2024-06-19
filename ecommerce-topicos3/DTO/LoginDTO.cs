@@ -6,7 +6,7 @@ namespace ecommerce_topicos3.DTO
     {
         [Required]
         [StringLength(255)]
-        public string Email { get; set; }
+        public string Username { get; set; }
 
         [Required]
         [StringLength(255)]
