@@ -52,8 +52,8 @@
             </mat-error>
           </mat-form-field>
           <mat-form-field appearance="outline" class="full-width-input" color="accent">
-            <mat-label>Login</mat-label>
-            <input matInput type="text" formControlName="login"/>
+            <mat-label>Telefone</mat-label>
+            <input matInput type="text" formControlName="telefone"/>
             <mat-error *ngIf="formGroup.get('telefone')?.hasError('apiError')">
               {{ formGroup.get('telefone')?.getError('apiError') }}
             </mat-error>
