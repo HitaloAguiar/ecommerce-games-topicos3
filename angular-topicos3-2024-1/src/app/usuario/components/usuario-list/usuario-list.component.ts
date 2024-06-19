@@ -28,7 +28,7 @@ export class UsuarioListComponent implements OnInit {
       this.paginator._intl = this.customPaginatorIntl; // Configuração da internacionalização
     }
   }
-  
+
   ngOnInit(): void {
 
     this.carregarUsuarios();
@@ -44,7 +44,7 @@ export class UsuarioListComponent implements OnInit {
       });
     } else {
       // buscando todos os usuarios
-      this.usuarioService.findAllPaginado(this.pagina, this.pageSize).subscribe(data => {
+      this.usuarioService.findAll().subscribe(data => {
         this.usuarios = data;
       });
     }

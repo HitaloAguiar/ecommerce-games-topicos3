@@ -81,14 +81,16 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddCors(options =>
     options.AddPolicy(
-        "libraryC", policyBuilder =>
+        "ecommerce", policyBuilder =>
         {
             policyBuilder.WithOrigins("http://localhost:4200");
             policyBuilder.AllowAnyHeader();
             policyBuilder.AllowAnyMethod();
-            policyBuilder.AllowCredentials();
+            //policyBuilder.AllowCredentials();
+            policyBuilder.AllowAnyOrigin();
+            policyBuilder.WithExposedHeaders("Authorization");
         }
-)
+        )
 
 );
 
@@ -122,5 +124,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("ecommerce");
 
 app.Run();

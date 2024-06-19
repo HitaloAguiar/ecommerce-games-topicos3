@@ -10,7 +10,7 @@ import { Usuario } from '../models/usuario.model';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseURL: string = 'http://localhost:7036/api/auth';
+  private baseURL: string = 'https://localhost:7036/api/Auth/login';
   private tokenKey = 'jwt_token';
   private usuarioLogadoKey = 'usuario_logado';
   private usuarioLogadoSubject = new BehaviorSubject<Usuario | null>(null);
@@ -35,9 +35,9 @@ export class AuthService {
   }
 
 
-  login(login: string, senha: string): Observable<any> {
+  login(username: string, senha: string): Observable<any> {
     const params = {
-      login: login,
+      username: username,
       senha: senha
     }
 

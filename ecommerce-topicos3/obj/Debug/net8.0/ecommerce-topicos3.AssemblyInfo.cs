@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ecommerce-topicos3")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37eec5c654def57953628df299f30bbe26057e26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05bd27257fd2a0607e9ba3849cf614945d46079c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ecommerce-topicos3")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ecommerce-topicos3")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
