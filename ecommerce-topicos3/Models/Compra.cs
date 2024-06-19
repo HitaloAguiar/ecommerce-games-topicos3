@@ -29,19 +29,20 @@ public partial class Compra
     [Column("enderecoId")]
     public long EnderecoId { get; set; }
 
-    [Column("pagamentoId")]
-    public long PagamentoId { get; set; }
+    [Column("formaPagamento")]
+    [StringLength(50)]
+    public string FormaPagamento { get; set; }
 
     [ForeignKey("EnderecoId")]
     [InverseProperty("Compra")]
     public virtual Endereco Endereco { get; set; }
 
+    [ForeignKey("FormaPagamento")]
+    [InverseProperty("Compra")]
+    public virtual FormaPagamento FormaPagamentoNavigation { get; set; }
+
     [InverseProperty("Compra")]
     public virtual ICollection<ItemCompra> ItemCompra { get; set; } = new List<ItemCompra>();
-
-    [ForeignKey("PagamentoId")]
-    [InverseProperty("Compra")]
-    public virtual Pagamento Pagamento { get; set; }
 
     [ForeignKey("UsuarioId")]
     [InverseProperty("Compra")]

@@ -47,4 +47,7 @@ public partial class Endereco
 
     [InverseProperty("Endereco")]
     public virtual ICollection<Compra> Compra { get; set; } = new List<Compra>();
+
+    [InverseProperty("EnderecoPrincipal")]
+    public virtual ICollection<Usuario> Usuario { get; set; } = new List<Usuario>();
 }

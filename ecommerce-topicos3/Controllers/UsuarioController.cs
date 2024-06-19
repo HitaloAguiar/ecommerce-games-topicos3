@@ -81,6 +81,16 @@ namespace ecommerce_topicos3.Controllers
         [HttpPost]
         public async Task<ActionResult> PostUsuario(UsuarioDTO usuarioDTO)
         {
+
+            var listUsuario = await _usuarioRepository.SelecionarTodos();
+
+            foreach (var usuario in listUsuario)
+            {
+                if (usuarioDTO.Username.Equals(usuario.Username))
+                {
+                    return BadRequest("Esse username já foi cadastrado");
+                }
+            }
             _usuarioRepository.Incluir(_mapper.Map<Usuario>(usuarioDTO));
             if (await _usuarioRepository.SaveAllAsync())
             {
@@ -108,6 +118,50 @@ namespace ecommerce_topicos3.Controllers
         private bool UsuarioExists(long id)
         {
             return _context.Usuario.Any(e => e.Id == id);
+        }
+
+        [HttpGet("/endereco/{id}")]
+        public async Task<ActionResult<Usuario>> GetEndereco(int id)
+        {
+            var usuario = await _usuarioRepository.SelecionarPorId(id);
+
+            if (usuario == null)
+            {
+                return NotFound("Usuario não encontrado");
+            }
+
+            if (usuario.EnderecoPrincipal == null)
+            {
+                return NotFound("Usuário ainda não possui endereço");
+            }
+
+            return Ok(_mapper.Map<EnderecoResponseDTO>(usuario.EnderecoPrincipal));
+        }
+
+        [HttpPut("/endereco/{id}")]
+        public async Task<IActionResult> insertEndereco(int id, EnderecoDTO enderecoDTO)
+        {
+            var usuario = await _usuarioRepository.SelecionarPorId(id);
+
+            var endereco = new Endereco
+            {
+                Logradouro = enderecoDTO.Logradouro,
+                Bairro = enderecoDTO.Bairro,
+                Numero = enderecoDTO.Numero,
+                Complemento = enderecoDTO.Complemento,
+                Cep = enderecoDTO.Cep,
+                CidadeId = enderecoDTO.CidadeId
+            };
+
+            usuario.EnderecoPrincipal = endereco;
+
+            _usuarioRepository.Alterar(usuario);
+            if (await _usuarioRepository.SaveAllAsync())
+            {
+                return Ok("Endereço alterado com sucesso");
+            }
+
+            return BadRequest("Erro ao alterar endereço");
         }
     }
 }

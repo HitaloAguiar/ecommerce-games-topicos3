@@ -16,6 +16,8 @@ namespace ecommerce_topicos3.Interfaces
 
         Usuario SelecionarPorEmail(string email);
 
+        Usuario SelecionarPorUsername(string username);
+
         Task<bool> SaveAllAsync();
     }
 }

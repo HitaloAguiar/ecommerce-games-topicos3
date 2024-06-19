@@ -46,6 +46,13 @@ namespace ecommerce_topicos3.Repositories
             return usuario;
         }
 
+        public Usuario SelecionarPorUsername(string username)
+        {
+            var usuario = _context.Usuario.FirstOrDefault(u => u.Username == username);
+
+            return usuario;
+        }
+
         public async Task<IEnumerable<Usuario>> SelecionarTodos()
         {
             return await _context.Usuario.ToListAsync();

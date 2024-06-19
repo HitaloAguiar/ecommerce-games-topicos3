@@ -16,12 +16,12 @@ namespace ecommerce_topicos3.Repositories
 
         public async Task<IEnumerable<Cidade>> SelecionarTodos()
         {
-            return await _context.Cidade.ToListAsync();
+            return await _context.Cidade.Include(cidade => cidade.Estado).ToListAsync();
         }
 
         public async Task<Cidade> SelecionarPorId(long id)
         {
-            var cidade = await _context.Cidade.Where(x => x.Id == id).FirstOrDefaultAsync();
+            var cidade = await _context.Cidade.Include(cidade => cidade.Estado).Where(x => x.Id == id).FirstOrDefaultAsync();
             return cidade;
         }
 

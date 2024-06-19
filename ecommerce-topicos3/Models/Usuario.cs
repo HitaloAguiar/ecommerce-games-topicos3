@@ -49,8 +49,18 @@ public partial class Usuario
     [StringLength(50)]
     public string Perfil { get; set; }
 
+    [Column("enderecoId")]
+    public long? EnderecoId { get; set; }
+
+    [Column("enderecoPrincipalId")]
+    public long? EnderecoPrincipalId { get; set; }
+
     [InverseProperty("Usuario")]
     public virtual ICollection<Compra> Compra { get; set; } = new List<Compra>();
+
+    [ForeignKey("EnderecoPrincipalId")]
+    [InverseProperty("Usuario")]
+    public virtual Endereco EnderecoPrincipal { get; set; }
 
     [ForeignKey("Perfil")]
     [InverseProperty("Usuario")]

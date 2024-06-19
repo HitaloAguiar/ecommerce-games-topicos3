@@ -40,7 +40,7 @@ namespace ecommerce_topicos3.Services
                 audience: audience,
                 claims:
                 [
-                    new Claim(type: ClaimTypes.Name, user.Nome),
+                    new Claim(type: ClaimTypes.Name, user.Username),
                     new Claim(type: ClaimTypes.Role, user.Perfil)
                 ],
                 expires: DateTime.Now.AddHours(24),

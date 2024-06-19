@@ -18,5 +18,10 @@ namespace ecommerce_topicos3.DTO
 
         [StringLength(255)]
         public string Developer { get; set; }
+
+        public string Genero { get; set; }
+
+        [StringLength(255)]
+        public string Plataforma { get; set; }
     }
 }

@@ -25,10 +25,6 @@ public partial class EcommerceContext : DbContext
 
     public virtual DbSet<Game> Game { get; set; }
 
-    public virtual DbSet<GameGenero> GameGenero { get; set; }
-
-    public virtual DbSet<GamePlataforma> GamePlataforma { get; set; }
-
     public virtual DbSet<ItemCompra> ItemCompra { get; set; }
 
     public virtual DbSet<Pagamento> Pagamento { get; set; }
@@ -56,9 +52,7 @@ public partial class EcommerceContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Compra_Endereco");
 
-            entity.HasOne(d => d.Pagamento).WithMany(p => p.Compra)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Compra_Pagamento");
+            entity.HasOne(d => d.FormaPagamentoNavigation).WithMany(p => p.Compra).HasConstraintName("FK_Compra_FormaPagamento");
 
             entity.HasOne(d => d.Usuario).WithMany(p => p.Compra)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -87,24 +81,6 @@ public partial class EcommerceContext : DbContext
         modelBuilder.Entity<Game>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Game__3213E83F08EE263F");
-        });
-
-        modelBuilder.Entity<GameGenero>(entity =>
-        {
-            entity.HasKey(e => new { e.GameId, e.Genero }).HasName("PK__GameGene__A25607CC55CCC5E1");
-
-            entity.HasOne(d => d.Game).WithMany(p => p.GameGenero)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_GameGenero_Game");
-        });
-
-        modelBuilder.Entity<GamePlataforma>(entity =>
-        {
-            entity.HasKey(e => new { e.GameId, e.Plataforma }).HasName("PK__GamePlat__621892115C1A2073");
-
-            entity.HasOne(d => d.Game).WithMany(p => p.GamePlataforma)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_GamePlataforma_Game");
         });
 
         modelBuilder.Entity<ItemCompra>(entity =>
@@ -137,6 +113,8 @@ public partial class EcommerceContext : DbContext
         modelBuilder.Entity<Usuario>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Usuario__3213E83F9E55CD3A");
+
+            entity.HasOne(d => d.EnderecoPrincipal).WithMany(p => p.Usuario).HasConstraintName("FK_Usuario_Endereco");
 
             entity.HasOne(d => d.PerfilNavigation).WithMany(p => p.Usuario)
                 .OnDelete(DeleteBehavior.ClientSetNull)

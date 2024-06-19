@@ -19,5 +19,8 @@ public partial class FormaPagamento
     public int Value { get; set; }
 
     [InverseProperty("FormaPagamentoNavigation")]
+    public virtual ICollection<Compra> Compra { get; set; } = new List<Compra>();
+
+    [InverseProperty("FormaPagamentoNavigation")]
     public virtual ICollection<Pagamento> Pagamento { get; set; } = new List<Pagamento>();
 }

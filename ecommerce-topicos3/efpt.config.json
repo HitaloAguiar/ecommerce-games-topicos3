@@ -1,6 +1,6 @@
 ﻿{
    "CodeGenerationMode": 4,
-   "ContextClassName": "ecommerceContext",
+   "ContextClassName": "EcommerceContext",
    "ContextNamespace": null,
    "FilterSchemas": false,
    "IncludeConnectionString": false,
@@ -36,14 +36,6 @@
       },
       {
          "Name": "[dbo].[Game]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[GameGenero]",
-         "ObjectType": 0
-      },
-      {
-         "Name": "[dbo].[GamePlataforma]",
          "ObjectType": 0
       },
       {

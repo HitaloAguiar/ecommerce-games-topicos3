@@ -29,17 +29,12 @@ public partial class Game
     [StringLength(255)]
     public string Developer { get; set; }
 
-    [Column("plataformas")]
-    public string Plataformas { get; set; }
+    [Column("genero")]
+    public string Genero { get; set; }
 
-    [Column("generos")]
-    public string Generos { get; set; }
-
-    [InverseProperty("Game")]
-    public virtual ICollection<GameGenero> GameGenero { get; set; } = new List<GameGenero>();
-
-    [InverseProperty("Game")]
-    public virtual ICollection<GamePlataforma> GamePlataforma { get; set; } = new List<GamePlataforma>();
+    [Column("plataforma")]
+    [StringLength(255)]
+    public string Plataforma { get; set; }
 
     [InverseProperty("Game")]
     public virtual ICollection<ItemCompra> ItemCompra { get; set; } = new List<ItemCompra>();

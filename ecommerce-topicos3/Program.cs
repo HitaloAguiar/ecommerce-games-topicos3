@@ -102,6 +102,10 @@ builder.Services.AddScoped<IEstadoRepository, EstadoRepository>();
 
 builder.Services.AddScoped<ICidadeRepository, CidadeRepository>();
 
+builder.Services.AddScoped<IGameRepository, GameRepository>();
+
+builder.Services.AddScoped<ICompraRepository, CompraRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

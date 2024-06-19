@@ -28,9 +28,6 @@ public partial class Pagamento
     [StringLength(50)]
     public string FormaPagamento { get; set; }
 
-    [InverseProperty("Pagamento")]
-    public virtual ICollection<Compra> Compra { get; set; } = new List<Compra>();
-
     [ForeignKey("FormaPagamento")]
     [InverseProperty("Pagamento")]
     public virtual FormaPagamento FormaPagamentoNavigation { get; set; }
