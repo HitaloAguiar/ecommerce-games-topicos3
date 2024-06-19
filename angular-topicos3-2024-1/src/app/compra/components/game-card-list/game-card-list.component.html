@@ -1,11 +1,22 @@
 <div class="main-container">
- 
+  <div class="container-input">
+    <div class="input-container">
+    <!--  <mat-form-field appearance="outline" class="input-field">
+        <mat-label>Pesquisar</mat-label>
+        <input [(ngModel)]="filtro" matInput placeholder="Ex. The Last of Us" #input (keyup.enter)="aplicarFiltro()">
+      </mat-form-field>
+      <button mat-icon-button class="search-button" (click)="aplicarFiltro()">
+        <mat-icon>search</mat-icon> src="/assets/icons/slime.png"
+      </button>--> 
+       </div>
+  </div>
+
   <div class="cards">
     <div class="container responsive-grid">
       <ng-container *ngIf="jogosEncontrados; else nenhumJogoEncontrado">
       <mat-card  *ngFor="let card of cards()">
 
-        <img mat-card-image [src]="card.urlImagem">
+        <img mat-card-image src="/assets/hollow-knight-cover.png">
 
         <mat-card-title class="centered-text"> {{card.titulo}} </mat-card-title>
 

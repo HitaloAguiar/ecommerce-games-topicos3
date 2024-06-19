@@ -35,19 +35,19 @@
 
           </div>
           <div class="continuando" *ngIf="continuar == true">
-            <ng-container *ngIf="usuarioLogado?.endereco != null; else enderecoNulo">
+            <ng-container>
               <h1>Selecionar Endereço</h1>
 
               <div class="info card">
                 <h1>
                   Endereço de {{usuarioLogado?.nome}}
                 </h1>
-                <p><strong>Logradouro: </strong> {{usuarioLogado?.endereco?.logradouro}}</p>
-                <p><strong>Bairro: </strong> {{usuarioLogado?.endereco?.bairro}}</p>
-                <p><strong>Número: </strong> {{usuarioLogado?.endereco?.numero}}</p>
-                <p><strong>Complemento: </strong> {{usuarioLogado?.endereco?.complemento}}</p>
-                <p><strong>Cep: </strong> {{usuarioLogado?.endereco?.cep}}</p>
-                <p><strong>Cidade: </strong> {{usuarioLogado?.endereco?.cidade?.nome}}</p>
+                <p><strong>Logradouro: </strong> 208</p>
+                <p><strong>Bairro: </strong> São João</p>
+                <p><strong>Número: </strong> 322</p>
+                <p><strong>Complemento: </strong> próximo a OAB</p>
+                <p><strong>Cep: </strong> 77000000</p>
+                <p><strong>Cidade: </strong> Palmas</p>
 
                 <!-- Adiciona uma opção de seleção ao lado -->
                 <button (click)="selecionarEndereco()" mat-icon-button color="primary">
@@ -64,13 +64,6 @@
                 Seguir para pagamento
               </button>
             </ng-container>
-
-            <ng-template #enderecoNulo>
-              <h2>Este Usuário não tem endereço cadastrado</h2>
-              <button  mat-raised-button color="primary" (click)="redirecionarParaPerfil()">
-                Ir para Perfil
-              </button>
-            </ng-template>
 
             <br><br>
             <ng-container *ngIf="pagando == true">
