@@ -61,7 +61,7 @@ namespace ecommerce_topicos3.Controllers
             var updateCidade = await _cidadeRepository.SelecionarPorId(id);
 
             updateCidade.Nome = cidadeDTO.Nome;
-            updateCidade.EstadoId = cidadeDTO.EstadoId;
+            updateCidade.EstadoId = cidadeDTO.Estado;
 
             _cidadeRepository.Alterar(updateCidade);
             if (await _cidadeRepository.SaveAllAsync())

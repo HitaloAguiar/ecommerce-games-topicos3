@@ -8,7 +8,7 @@ import { Cidade } from '../models/cidade.model';
 })
 export class CidadeService {
 
-  private baseURL: string =  'http://localhost:7036/api/Cidade';
+  private baseURL: string =  'https://localhost:7036/api/Cidade';
 
   constructor(private http: HttpClient) {}
 

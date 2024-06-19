@@ -35,14 +35,11 @@ export class GameFormComponent {
       plataforma:[(game && game.plataforma)? game.plataforma : '', Validators.required]
     })
 
-    if (game && game.nomeImagem) {
-      this.imagePreview = this.gameService.getUrlImagem(game.nomeImagem);
-      this.fileName = game.nomeImagem;
-    }
+
   }
 
   ngOnInit(): void {
-    
+
   }
 
   salvar() {

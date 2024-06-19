@@ -16,7 +16,7 @@
             <mat-label>Descrição</mat-label>
             <textarea matInput placeholder="Descrição do jogo" formControlName="descricao"></textarea>
           </mat-form-field>
-          
+
             <mat-form-field appearance="outline" class="full-width-input" color="accent">
                 <mat-label>Developer</mat-label>
                 <input matInput type="text" formControlName="developer" #inputNome/>
@@ -40,23 +40,13 @@
                 {{ formGroup.get('plataforma')?.getError('apiError') }}
               </mat-error>
           </mat-form-field>
-          
+
           <mat-form-field appearance="outline" class="full-width-input" color="accent">
             <mat-label>Preço</mat-label>
             <input matInput type="number" formControlName="preco" #inputPreco/>
             <mat-error *ngIf="formGroup.get('preco')?.hasError('apiError')">
               {{ formGroup.get('preco')?.getError('apiError') }}
             </mat-error>
-        </mat-form-field>
-        
-        <mat-form-field appearance="outline" class="full-width-input">
-          <mat-label>Imagem do Game</mat-label>
-          <input type="file" (change)="carregarImagemSelecionada($event)" hidden #fileInput>
-          <input matInput [value]="fileName" readonly>
-
-          <button mat-icon-button matSuffix (click)="fileInput.click()">
-              <mat-icon>folder_open</mat-icon>
-          </button>
         </mat-form-field>
       </form>
     </mat-card-content>

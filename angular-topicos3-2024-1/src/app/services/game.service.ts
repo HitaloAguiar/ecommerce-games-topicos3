@@ -8,7 +8,7 @@ import { Game } from '../models/game.model';
 })
 export class GameService {
 
-  private baseURL: string = 'http://localhost:7036';
+  private baseURL: string = 'https://localhost:7036/api/Game';
 
   constructor(private http: HttpClient) { }
 

@@ -8,7 +8,7 @@ import { Estado } from '../models/estado.model';
 })
 export class EstadoService {
 
-  private baseURL: string =  'http://localhost:7036';
+  private baseURL: string =  'https://localhost:7036/api/Estado';
 
   constructor(private http: HttpClient) {}
 

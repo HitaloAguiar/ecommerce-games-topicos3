@@ -10,6 +10,6 @@ namespace ecommerce_topicos3.DTO
         [StringLength(255)]
         public string Nome { get; set; }
 
-        public long EstadoId { get; set; }
+        public long Estado { get; set; }
     }
 }

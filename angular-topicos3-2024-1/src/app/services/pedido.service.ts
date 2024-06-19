@@ -11,7 +11,7 @@ import { CartaoCredito } from '../models/cartao-credito.model';
 })
 
 export class PedidoService {
-  private baseURL: string =  'http://localhost:7036';
+  private baseURL: string =  'http://localhost:7036/api/Compra';
 
   constructor(private http: HttpClient) {}
 
@@ -55,10 +55,10 @@ export class PedidoService {
       itens: itens
     };
 
-    return this.http.post<any>(`${this.baseURL}/pedidos`, params);
+    return this.http.post<any>(`${this.baseURL}`, params);
   }
 
   findAll(login: string): Observable<any> {
-    return this.http.get<any>(`${this.baseURL}/pedidos/${login}`);
+    return this.http.get<any>(`${this.baseURL}`);
 }
 }

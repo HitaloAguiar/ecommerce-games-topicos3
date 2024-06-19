@@ -58,7 +58,7 @@ export class UsuarioService {
 //  }
 
   getEndereco(idUsuario: string): Observable<Endereco> {
-    return this.http.get<Endereco>(`${this.baseURL}/endereco/${idUsuario}`);
+    return this.http.get<Endereco>(`https://localhost:7036/endereco/${idUsuario}`);
   }
 
   salvarEndereco(endereco: Endereco, idUsuario: number): Observable<any> {
