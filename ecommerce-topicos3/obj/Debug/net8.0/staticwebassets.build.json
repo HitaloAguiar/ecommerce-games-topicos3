@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AtTOvEjSxeHjFOVVBafz4flFnRoUhdkZmtKDVH68aF8=",
+  "Hash": "ZqOztpeHM2X/qrDfMf+zomx/JduDz2SCnn5VIkBFOr8=",
   "Source": "ecommerce-topicos3",
   "BasePath": "_content/ecommerce-topicos3",
   "Mode": "Default",
@@ -9,10 +9,10 @@
   "DiscoveryPatterns": [],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Hital\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
+      "Identity": "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Hital\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css",
       "AssetKind": "All",
@@ -25,13 +25,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Hital\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\Microsoft.AspNetCore.Components.QuickGrid.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Hital\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js",
+      "Identity": "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js",
       "SourceId": "Microsoft.AspNetCore.Components.QuickGrid",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Hital\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\",
       "BasePath": "_content/Microsoft.AspNetCore.Components.QuickGrid",
       "RelativePath": "QuickGrid.razor.js",
       "AssetKind": "All",
@@ -44,13 +44,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Hital\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js"
+      "OriginalItemSpec": "C:\\Users\\felip\\.nuget\\packages\\microsoft.aspnetcore.components.quickgrid\\8.0.4\\staticwebassets\\QuickGrid.razor.js"
     },
     {
-      "Identity": "C:\\Users\\Hital\\Desktop\\Sistema de informação - UNITINS\\topicos3\\topicos3-ecommerce\\ecommerce-games-topicos3\\ecommerce-topicos3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ecommerce-topicos3.styles.css",
+      "Identity": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ecommerce-topicos3.styles.css",
       "SourceId": "ecommerce-topicos3",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Hital\\Desktop\\Sistema de informação - UNITINS\\topicos3\\topicos3-ecommerce\\ecommerce-games-topicos3\\ecommerce-topicos3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ecommerce-topicos3",
       "RelativePath": "ecommerce-topicos3.styles.css",
       "AssetKind": "All",
@@ -63,7 +63,7 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Hital\\Desktop\\Sistema de informação - UNITINS\\topicos3\\topicos3-ecommerce\\ecommerce-games-topicos3\\ecommerce-topicos3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ecommerce-topicos3.styles.css"
+      "OriginalItemSpec": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ecommerce-topicos3.styles.css"
     }
   ]
 }

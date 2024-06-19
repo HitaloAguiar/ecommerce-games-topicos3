@@ -1,0 +1,686 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\models\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:models\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\models\\cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:models\\cidade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\models\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:models\\estado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\migrations\\20240619064532_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:migrations\\20240619064532_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\controllers\\compracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:controllers\\compracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\controllers\\estadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:controllers\\estadocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\controllers\\cidadecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:controllers\\cidadecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\repositories\\comprarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:repositories\\comprarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\mapping\\entitiestodtomappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:mapping\\entitiestodtomappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\models\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:models\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\dto\\enderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:dto\\enderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\models\\itemcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:models\\itemcompra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\dto\\compradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:dto\\compradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\repositories\\cidaderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:repositories\\cidaderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\interfaces\\icomprarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:interfaces\\icomprarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\dto\\compraresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:dto\\compraresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\dto\\itemcompradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:dto\\itemcompradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\dto\\itemcompraresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:dto\\itemcompraresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\dto\\enderecoresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:dto\\enderecoresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\interfaces\\igamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:interfaces\\igamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:interfaces\\itokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\dto\\cidaderesponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:dto\\cidaderesponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\repositories\\estadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:repositories\\estadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\models\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:models\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\repositories\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:repositories\\gamerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\interfaces\\iestadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:interfaces\\iestadorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\dto\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:dto\\gamedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\dto\\gameresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:dto\\gameresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:ecommerce-topicos3.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\efpt.config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:efpt.config.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|c:\\users\\felip\\downloads\\nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\interfaces\\icidaderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{26538397-3F93-46CC-B859-F940072FB3AD}|ecommerce-topicos3.csproj|solutionrelative:interfaces\\icidaderepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EstadoController.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\EstadoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EstadoController.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\EstadoController.cs",
+              "RelativeToolTip": "Controllers\\EstadoController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAQwGwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Controllers\\UsuarioController.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAAowKMAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAUwA8AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-19T06:48:29.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20240619064532_initial.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Migrations\\20240619064532_initial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240619064532_initial.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Migrations\\20240619064532_initial.cs",
+              "RelativeToolTip": "Migrations\\20240619064532_initial.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Estado.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Estado.cs",
+              "RelativeDocumentMoniker": "Models\\Estado.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Estado.cs",
+              "RelativeToolTip": "Models\\Estado.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cidade.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Cidade.cs",
+              "RelativeDocumentMoniker": "Models\\Cidade.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Cidade.cs",
+              "RelativeToolTip": "Models\\Cidade.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwB0AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAwwBMAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Endereco.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Endereco.cs",
+              "RelativeDocumentMoniker": "Models\\Endereco.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Endereco.cs",
+              "RelativeToolTip": "Models\\Endereco.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAgwDMAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CidadeController.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\CidadeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CidadeController.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\CidadeController.cs",
+              "RelativeToolTip": "Controllers\\CidadeController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAFYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CompraRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\CompraRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\CompraRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\CompraRepository.cs",
+              "RelativeToolTip": "Repositories\\CompraRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EnderecoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\EnderecoDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\EnderecoDTO.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\EnderecoDTO.cs",
+              "RelativeToolTip": "DTO\\EnderecoDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ItemCompra.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\ItemCompra.cs",
+              "RelativeDocumentMoniker": "Models\\ItemCompra.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\ItemCompra.cs",
+              "RelativeToolTip": "Models\\ItemCompra.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CompraController.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\CompraController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CompraController.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\CompraController.cs",
+              "RelativeToolTip": "Controllers\\CompraController.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAwwF4AAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.254Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EntitiesToDTOMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Mapping\\EntitiesToDTOMappingProfile.cs",
+              "RelativeDocumentMoniker": "Mapping\\EntitiesToDTOMappingProfile.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Mapping\\EntitiesToDTOMappingProfile.cs",
+              "RelativeToolTip": "Mapping\\EntitiesToDTOMappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ICompraRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\ICompraRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ICompraRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\ICompraRepository.cs",
+              "RelativeToolTip": "Interfaces\\ICompraRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CompraDTO.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\CompraDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\CompraDTO.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\CompraDTO.cs",
+              "RelativeToolTip": "DTO\\CompraDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Compra.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Compra.cs",
+              "RelativeDocumentMoniker": "Models\\Compra.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Compra.cs",
+              "RelativeToolTip": "Models\\Compra.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBEAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CidadeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\CidadeRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\CidadeRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\CidadeRepository.cs",
+              "RelativeToolTip": "Repositories\\CidadeRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CompraResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\CompraResponseDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\CompraResponseDTO.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\CompraResponseDTO.cs",
+              "RelativeToolTip": "DTO\\CompraResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAB3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAGoAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ItemCompraDTO.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\ItemCompraDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\ItemCompraDTO.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\ItemCompraDTO.cs",
+              "RelativeToolTip": "DTO\\ItemCompraDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ItemCompraResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\ItemCompraResponseDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\ItemCompraResponseDTO.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\ItemCompraResponseDTO.cs",
+              "RelativeToolTip": "DTO\\ItemCompraResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "EnderecoResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\EnderecoResponseDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\EnderecoResponseDTO.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\EnderecoResponseDTO.cs",
+              "RelativeToolTip": "DTO\\EnderecoResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IUsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeToolTip": "Interfaces\\IUsuarioRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAIwDUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ITokenService.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\ITokenService.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ITokenService.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\ITokenService.cs",
+              "RelativeToolTip": "Interfaces\\ITokenService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IGameRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\IGameRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IGameRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\IGameRepository.cs",
+              "RelativeToolTip": "Interfaces\\IGameRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Services\\TokenService.cs",
+              "RelativeToolTip": "Services\\TokenService.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCoAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "EstadoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\EstadoRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\EstadoRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\EstadoRepository.cs",
+              "RelativeToolTip": "Repositories\\EstadoRepository.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAowCsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.327Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "GameRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\GameRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\GameRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Repositories\\GameRepository.cs",
+              "RelativeToolTip": "Repositories\\GameRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "CidadeResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\CidadeResponseDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\CidadeResponseDTO.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\CidadeResponseDTO.cs",
+              "RelativeToolTip": "DTO\\CidadeResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "EcommerceContext.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\EcommerceContext.cs",
+              "RelativeDocumentMoniker": "Models\\EcommerceContext.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\EcommerceContext.cs",
+              "RelativeToolTip": "Models\\EcommerceContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IEstadoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\IEstadoRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IEstadoRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\IEstadoRepository.cs",
+              "RelativeToolTip": "Interfaces\\IEstadoRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GameController.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\GameController.cs",
+              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Controllers\\GameController.cs",
+              "RelativeToolTip": "Controllers\\GameController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.344Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "GameDTO.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\GameDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\GameDTO.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\GameDTO.cs",
+              "RelativeToolTip": "DTO\\GameDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Game.cs",
+              "RelativeDocumentMoniker": "Models\\Game.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Models\\Game.cs",
+              "RelativeToolTip": "Models\\Game.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCsAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "GameResponseDTO.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\GameResponseDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\GameResponseDTO.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\DTO\\GameResponseDTO.cs",
+              "RelativeToolTip": "DTO\\GameResponseDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ICidadeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\ICidadeRepository.cs",
+              "RelativeDocumentMoniker": "Interfaces\\ICidadeRepository.cs",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\Interfaces\\ICidadeRepository.cs",
+              "RelativeToolTip": "Interfaces\\ICidadeRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T06:48:29.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "efpt.config.json",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\efpt.config.json",
+              "RelativeDocumentMoniker": "efpt.config.json",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\efpt.config.json",
+              "RelativeToolTip": "efpt.config.json",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-19T06:48:29.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ecommerce-topicos3.http",
+              "DocumentMoniker": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.http",
+              "RelativeDocumentMoniker": "ecommerce-topicos3.http",
+              "ToolTip": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.http",
+              "RelativeToolTip": "ecommerce-topicos3.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-06-19T06:48:29.376Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

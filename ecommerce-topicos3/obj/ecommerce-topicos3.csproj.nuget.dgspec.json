@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hital\\Desktop\\Sistema de informação - UNITINS\\topicos3\\topicos3-ecommerce\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.csproj": {}
+    "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hital\\Desktop\\Sistema de informação - UNITINS\\topicos3\\topicos3-ecommerce\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.csproj": {
+    "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hital\\Desktop\\Sistema de informação - UNITINS\\topicos3\\topicos3-ecommerce\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.csproj",
+        "projectUniqueName": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.csproj",
         "projectName": "ecommerce-topicos3",
-        "projectPath": "C:\\Users\\Hital\\Desktop\\Sistema de informação - UNITINS\\topicos3\\topicos3-ecommerce\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.csproj",
-        "packagesPath": "C:\\Users\\Hital\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hital\\Desktop\\Sistema de informação - UNITINS\\topicos3\\topicos3-ecommerce\\ecommerce-games-topicos3\\ecommerce-topicos3\\obj\\",
+        "projectPath": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\ecommerce-topicos3.csproj",
+        "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felip\\Downloads\\Nova pasta (2)\\ecommerce-games-topicos3\\ecommerce-topicos3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Hital\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,6 +34,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -100,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
