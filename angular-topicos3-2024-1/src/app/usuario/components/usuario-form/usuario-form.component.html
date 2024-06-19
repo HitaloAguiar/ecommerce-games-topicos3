@@ -25,6 +25,7 @@
                 {{ formGroup.get('email')?.getError('apiError') }}
               </mat-error>
           </mat-form-field>
+          
           <mat-form-field appearance="outline" class="full-width-input" color="accent">
               <mat-label>Login</mat-label>
               <input matInput type="text" formControlName="login"/>
@@ -32,6 +33,7 @@
                 {{ formGroup.get('login')?.getError('apiError') }}
               </mat-error>
           </mat-form-field>
+
           <mat-form-field appearance="outline" class="full-width-input" color="accent">
               <mat-label>Senha</mat-label>
               <input matInput type="password" formControlName="senha"/>
@@ -49,21 +51,13 @@
               {{ formGroup.get('perfil')?.getError('apiError') }}
             </mat-error>
           </mat-form-field>
-          <div formArrayName="telefones">
-            <div *ngFor="let telefone of telefones.controls; let i = index">
-                <mat-form-field appearance="outline" color="accent">
-                    <mat-label>Telefone</mat-label>
-                    <input matInput [formControlName]="i">
-                    <mat-error *ngIf="formGroup.get('telefones')?.hasError('apiError')">
-                      {{ formGroup.get('telefones')?.getError('apiError') }}
-                    </mat-error>
-                </mat-form-field>
-                <button mat-icon-button (click)="removerTelefone(i)">
-                    <mat-icon>delete</mat-icon>
-                </button>
-            </div>
-            <button mat-raised-button (click)="adicionarTelefone()" color="primary">Adicionar Telefone</button>
-        </div>
+          <mat-form-field appearance="outline" class="full-width-input" color="accent">
+            <mat-label>Login</mat-label>
+            <input matInput type="text" formControlName="login"/>
+            <mat-error *ngIf="formGroup.get('telefone')?.hasError('apiError')">
+              {{ formGroup.get('telefone')?.getError('apiError') }}
+            </mat-error>
+        </mat-form-field>
       </form>
     </mat-card-content>
     <mat-card-actions>

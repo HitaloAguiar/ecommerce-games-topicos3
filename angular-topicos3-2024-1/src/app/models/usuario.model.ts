@@ -1,6 +1,5 @@
 import { CartaoCredito } from "./cartao-credito.model";
 import { Endereco } from "./endereco.model";
-import { Telefone } from "./telefone.model";
 
 export class Usuario {
 
@@ -11,8 +10,7 @@ export class Usuario {
   login!: string;
   senha!: string;
   perfil!: string;
-  telefones!: Telefone[];
+  telefone!: string;
   endereco!: Endereco;
   nomeImagem!: string;
-  cartao!: CartaoCredito;
 }

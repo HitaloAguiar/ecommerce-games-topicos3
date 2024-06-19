@@ -1,7 +1,3 @@
-import { Developer } from "./developer.model";
-import { Genero } from "./genero.model";
-import { Plataforma } from "./plataforma.model";
-
 export class Game {
 
   id!: number;
@@ -12,8 +8,7 @@ export class Game {
   nomeImagem1!: string;
   nomeImagem2!: string;
   nomeImagem3!: string;
-  anoLancamento!: Date;
-  developer!: Developer;
-  generos!: Genero[];
-  plataformas!: Plataforma[];
+  developer!: string;
+  genero!: string;
+  plataforma!: string;
 }

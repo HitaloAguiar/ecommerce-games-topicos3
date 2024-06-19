@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Telefone } from 'src/app/models/telefone.model';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/services/usuario.service';
 
@@ -30,20 +29,8 @@ export class UsuarioFormComponent {
       login:[(usuario && usuario.login)? usuario.login : '', Validators.required],
       senha:[(usuario && usuario.senha)? usuario.senha : '', Validators.required],
       perfil:[(usuario && usuario.perfil)? usuario.perfil : '', Validators.required],
-      telefones: (usuario && usuario.telefones)? this.formBuilder.array(usuario.telefones) : this.formBuilder.array([])
+      telefone:[(usuario && usuario.telefone)? usuario.telefone : '', Validators.required]
     })
-  }
-
-  get telefones() {
-    return this.formGroup.get('telefones') as FormArray;
-  }
-
-  adicionarTelefone() {
-    this.telefones.push(this.formBuilder.control(''));
-  }
-
-  removerTelefone(index: number) {
-    this.telefones.removeAt(index);
   }
 
   salvar() {
@@ -66,7 +53,7 @@ export class UsuarioFormComponent {
             this.formGroup.get('login')?.setErrors({ apiError: this.getErrorMessage('login') });
             this.formGroup.get('senha')?.setErrors({ apiError: this.getErrorMessage('senha') });
             this.formGroup.get('perfil')?.setErrors({ apiError: this.getErrorMessage('perfil') });
-            this.formGroup.get('telefones')?.setErrors({ apiError: this.getErrorMessage('telefones') });
+            this.formGroup.get('telefone')?.setErrors({ apiError: this.getErrorMessage('telefone') });
 
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
           }
@@ -89,7 +76,7 @@ export class UsuarioFormComponent {
             this.formGroup.get('login')?.setErrors({ apiError: this.getErrorMessage('login') });
             this.formGroup.get('senha')?.setErrors({ apiError: this.getErrorMessage('senha') });
             this.formGroup.get('perfil')?.setErrors({ apiError: this.getErrorMessage('perfil') });
-            this.formGroup.get('telefones')?.setErrors({ apiError: this.getErrorMessage('telefones') });
+            this.formGroup.get('telefone')?.setErrors({ apiError: this.getErrorMessage('telefone') });
 
             console.log('Erro ao atualizar' + JSON.stringify(errorResponse));
           }

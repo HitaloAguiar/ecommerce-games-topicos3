@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Developer } from 'src/app/models/developer.model';
 import { Game } from 'src/app/models/game.model';
-import { Genero } from 'src/app/models/genero.model';
-import { Plataforma } from 'src/app/models/plataforma.model';
-import { DeveloperService } from 'src/app/services/developer.service';
 import { GameService } from 'src/app/services/game.service';
-import { GeneroService } from 'src/app/services/genero.service';
-import { PlataformaService } from 'src/app/services/plataforma.service';
 
 @Component({
   selector: 'app-game-form',
@@ -20,10 +14,6 @@ export class GameFormComponent {
   formGroup: FormGroup;
   apiResponse: any = null;
 
-  developers: Developer[] = [];
-  generos: Genero[] = [];
-  plataformas: Plataforma[] = [];
-
   fileName: string = '';
   selectedFile: File | null = null;
   imagePreview: string | ArrayBuffer | null = null;
@@ -31,22 +21,18 @@ export class GameFormComponent {
   constructor(private formBuilder: FormBuilder,
               private gameService: GameService,
               private router: Router,
-              private activatedRoute: ActivatedRoute,
-              private developerService: DeveloperService,
-              private generoService: GeneroService,
-              private plataformaService: PlataformaService
+              private activatedRoute: ActivatedRoute
               ) {
 
     const game: Game = this.activatedRoute.snapshot.data['game'];
     this.formGroup = formBuilder.group({
       id:[(game && game.id)? game.id : null],
       nome:[(game && game.nome)? game.nome : '', Validators.required],
-      anoLancamento:[(game && game.anoLancamento)? game.anoLancamento : '', Validators.required],
       preco:[(game && game.preco)? game.preco : '', Validators.required],
       descricao:[(game && game.descricao)? game.descricao : '', Validators.required],
-      developer:[(game && game.developer)? game.developer.id : '', Validators.required],
-      generos:[(game && game.generos)? game.generos.map((genero) => genero.id) : '', Validators.required],
-      plataformas:[(game && game.plataformas)? game.plataformas.map((plataforma) => plataforma.id) : '', Validators.required]
+      developer:[(game && game.developer)? game.developer : '', Validators.required],
+      genero:[(game && game.genero)? game.genero : '', Validators.required],
+      plataforma:[(game && game.plataforma)? game.plataforma : '', Validators.required]
     })
 
     if (game && game.nomeImagem) {
@@ -56,17 +42,7 @@ export class GameFormComponent {
   }
 
   ngOnInit(): void {
-    this.developerService.findAll().subscribe(data => {
-      this.developers = data;
-    });
-
-    this.generoService.findAll().subscribe(data => {
-      this.generos = data;
-    });
-
-    this.plataformaService.findAll().subscribe(data => {
-      this.plataformas = data;
-    });
+    
   }
 
   salvar() {
@@ -84,10 +60,9 @@ export class GameFormComponent {
 
             // Associar erros aos campos do formulário
             this.formGroup.get('nome')?.setErrors({ apiError: this.getErrorMessage('nome') });
-            this.formGroup.get('anoLancamento')?.setErrors({ apiError: this.getErrorMessage('anoLancamento') });
-            this.formGroup.get('developer')?.setErrors({ apiError: this.getErrorMessage('developer') });
-            this.formGroup.get('generos')?.setErrors({ apiError: this.getErrorMessage('generos') });
-            this.formGroup.get('plataformas')?.setErrors({ apiError: this.getErrorMessage('plataformas') });
+            this.formGroup.get('develope')?.setErrors({ apiError: this.getErrorMessage('developer') });
+            this.formGroup.get('genero')?.setErrors({ apiError: this.getErrorMessage('genero') });
+            this.formGroup.get('plataforma')?.setErrors({ apiError: this.getErrorMessage('plataforma') });
             this.formGroup.get('preco')?.setErrors({ apiError: this.getErrorMessage('preco') });
 
             console.log('Erro ao incluir' + JSON.stringify(errorResponse));
@@ -106,10 +81,9 @@ export class GameFormComponent {
 
             // Associar erros aos campos do formulário
             this.formGroup.get('nome')?.setErrors({ apiError: this.getErrorMessage('nome') });
-            this.formGroup.get('anoLancamento')?.setErrors({ apiError: this.getErrorMessage('anoLancamento') });
             this.formGroup.get('developer')?.setErrors({ apiError: this.getErrorMessage('developer') });
-            this.formGroup.get('generos')?.setErrors({ apiError: this.getErrorMessage('generos') });
-            this.formGroup.get('plataformas')?.setErrors({ apiError: this.getErrorMessage('plataformas') });
+            this.formGroup.get('genero')?.setErrors({ apiError: this.getErrorMessage('generos') });
+            this.formGroup.get('plataforma')?.setErrors({ apiError: this.getErrorMessage('plataformas') });
             this.formGroup.get('preco')?.setErrors({ apiError: this.getErrorMessage('preco') });
 
             console.log('Erro ao atualizar' + JSON.stringify(errorResponse));

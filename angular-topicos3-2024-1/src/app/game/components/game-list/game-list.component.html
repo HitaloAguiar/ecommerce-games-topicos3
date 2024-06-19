@@ -47,27 +47,19 @@
     <!-- Developer Column -->
     <ng-container matColumnDef="developer-column">
       <th mat-header-cell *matHeaderCellDef> Developer </th>
-      <td mat-cell *matCellDef="let game"> {{game.developer.nome}} </td>
+      <td mat-cell *matCellDef="let game"> {{game.developer}} </td>
     </ng-container>
 
     <!-- Gênero Column -->
-    <ng-container matColumnDef="genero-column">
-      <th mat-header-cell *matHeaderCellDef> Gêneros </th>
-      <td mat-cell *matCellDef="let game">
-        <mat-list role="list" *ngFor="let genero of game.generos">
-          {{ genero.nome }}
-        </mat-list>
-      </td>
+    <ng-container matColumnDef="developer-column">
+      <th mat-header-cell *matHeaderCellDef> Gênero </th>
+      <td mat-cell *matCellDef="let game"> {{game.genero}} </td>
     </ng-container>
 
     <!-- Plataforma Column -->
-    <ng-container matColumnDef="plataforma-column">
-      <th mat-header-cell *matHeaderCellDef> Plataformas </th>
-      <td mat-cell *matCellDef="let game">
-        <mat-list role="list" *ngFor="let plataforma of game.plataformas">
-          {{ plataforma.nome }}
-        </mat-list>
-      </td>
+    <ng-container matColumnDef="developer-column">
+      <th mat-header-cell *matHeaderCellDef> Plataforma </th>
+      <td mat-cell *matCellDef="let game"> {{game.plataforma}} </td>
     </ng-container>
 
     <!-- Preço Column -->

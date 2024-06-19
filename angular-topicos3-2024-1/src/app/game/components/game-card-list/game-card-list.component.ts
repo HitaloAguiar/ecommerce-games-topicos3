@@ -88,7 +88,7 @@ export class GameCardListComponent implements OnInit {
     this.games.forEach(game => {
       cards.push({
         titulo: game.nome,
-        developer: game.developer.nome,
+        developer: game.developer,
         preco: game.preco,
         urlImagem: this.gameService.getUrlImagem(game.nomeImagem)
       });

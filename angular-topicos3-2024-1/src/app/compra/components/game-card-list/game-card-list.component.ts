@@ -93,7 +93,7 @@ export class GameCardListComponent implements OnInit {
       cards.push({
         id: game.id,
         titulo: game.nome,
-        developer: game.developer.nome,
+        developer: game.developer,
         preco: game.preco,
         urlImagem: this.gameService.getUrlImagem(game.nomeImagem)
       });
