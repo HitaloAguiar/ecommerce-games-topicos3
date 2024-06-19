@@ -10,7 +10,7 @@ namespace ecommerce_topicos3.Interfaces
 
         void Excluir(Usuario usuario);
 
-        Task<Usuario> SelecionarPorId(int id);
+        Task<Usuario> SelecionarPorId(long id);
 
         Task<IEnumerable<Usuario>> SelecionarTodos();
 

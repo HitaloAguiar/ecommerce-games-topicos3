@@ -33,9 +33,13 @@ namespace ecommerce_topicos3.Repositories
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<Usuario> SelecionarPorId(int id)
+        public async Task<Usuario> SelecionarPorId(long id)
         {
-            var usuario = await _context.Usuario.Where(x => x.Id == id).FirstOrDefaultAsync();
+            var usuario = await _context.Usuario.Where(x => x.Id == id)
+                                                .Include(usuario => usuario.EnderecoPrincipal)
+                                                    .ThenInclude(endereco => endereco.Cidade)
+                                                    .ThenInclude(cidade => cidade.Estado)
+                                                .FirstOrDefaultAsync();
             return usuario;
         }
 

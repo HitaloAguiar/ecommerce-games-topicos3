@@ -10,6 +10,7 @@ using AutoMapper;
 using ecommerce_topicos3.DTO;
 using ecommerce_topicos3.Interfaces;
 using ecommerce_topicos3.Services;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 
 namespace ecommerce_topicos3.Controllers
 {
@@ -43,7 +44,7 @@ namespace ecommerce_topicos3.Controllers
 
         // GET: api/Usuario/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Usuario>> GetUsuario(int id)
+        public async Task<ActionResult<Usuario>> GetUsuario(long id)
         {
             var usuario = await _usuarioRepository.SelecionarPorId(id);
 
@@ -58,7 +59,7 @@ namespace ecommerce_topicos3.Controllers
         // PUT: api/Usuario/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUsuario(int id, UsuarioDTO usuarioDTO)
+        public async Task<IActionResult> PutUsuario(long id, UsuarioDTO usuarioDTO)
         {
             var updateUsuario = await _usuarioRepository.SelecionarPorId(id);
 
@@ -176,6 +177,43 @@ namespace ecommerce_topicos3.Controllers
             }
 
             return BadRequest("Erro ao alterar endereço");
+        }
+
+        [HttpGet("/verifica-senha/{senha}/{id}")]
+        public async Task<ActionResult<Boolean>> verificaSenhaAtual(long id, string senhaAtual)
+        {
+            var usuario = await _usuarioRepository.SelecionarPorId(id);
+
+            if (!_tokenService.VerifyPassword(senhaAtual, usuario.Senha))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        [HttpPut("/update/senha/{id}")]
+        public async Task<IActionResult> updateSenha(int id, SenhaDTO senhaDTO)
+        {
+            var usuario = await _usuarioRepository.SelecionarPorId(id);
+
+            if (senhaDTO.NovaSenha.Equals(senhaDTO.ConfirmarNovaSenha))
+            {
+                usuario.Senha = _tokenService.HashPassword(senhaDTO.NovaSenha);
+            }
+
+            else
+            {
+                return BadRequest("Os campos nova senha e confirmação da senha não correspondem");
+            }
+
+            _usuarioRepository.Alterar(usuario);
+            if (await _usuarioRepository.SaveAllAsync())
+            {
+                return Ok("Senha alterado com sucesso");
+            }
+
+            return BadRequest("Erro ao alterar senha");
         }
     }
 }
